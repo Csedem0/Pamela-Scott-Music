@@ -1,0 +1,95 @@
+// Main Form
+$(function() {
+	$('#subscribe-form').validate({
+    // Add requirements to each of the fields
+    rules: {
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    // Specify what error messages to display
+    messages: {
+      email: {
+        required: 'Please enter a valid email',
+        email: 'Please enter a valid email'
+      }
+    },
+    errorPlacement: function(error, element) {
+			element.attr('placeholder', error.text());
+		},
+    // Use Ajax to send everything to processForm.php
+    submitHandler: function(form) {
+      $(form).ajaxSubmit({
+        success: function(responseText, statusText, xhr, $form) {
+          $(form).find('.email').val('Thank you for subscribing!');
+        }
+      });
+      return false;
+    }
+  });
+});
+
+// Footer Form
+$(function() {
+	$('#subscribe-form_ft').validate({
+    // Add requirements to each of the fields
+    rules: {
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    // Specify what error messages to display
+    messages: {
+      email: {
+        required: "Please enter a valid email",
+        email: "Please enter a valid email"
+      }
+    },
+    errorPlacement: function(error, element) {
+			element.attr('placeholder', error.text());
+		},
+    // Use Ajax to send everything to processForm.php
+    submitHandler: function(form) {
+      $(form).ajaxSubmit({
+        success: function(responseText, statusText, xhr, $form) {
+          $(form).find('.email').val('Thank you for subscribing!');
+        }
+      });
+      return false;
+    }
+  });
+});
+
+// HC Form
+$(function() {
+  $('#subscribe-form_hc').validate({
+    // Add requirements to each of the fields
+    rules: {
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    // Specify what error messages to display
+    messages: {
+      email: {
+        required: "Please enter a valid email",
+        email: "Please enter a valid email"
+      }
+    },
+    errorPlacement: function(error, element) {
+      element.attr('placeholder', error.text());
+    },
+    // Use Ajax to send everything to processForm.php
+    submitHandler: function(form) {
+      $(form).ajaxSubmit({
+        success: function(responseText, statusText, xhr, $form) {
+          $(form).find('.email').val('Thanks for signing up!');
+        }
+      });
+      return false;
+    }
+  });
+});
