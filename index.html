@@ -303,7 +303,7 @@
   </script>
 
   <title>Pamela Scott Music</title>
-  <meta name="keywords" content="Worship, Praise, Events, Tours, Chords, Lyrics">
+  <meta name="keywords" content="Worship, Praise, Lyrics">
   <meta name="description"
     content="In worship, we express who God is and who we are in Him. We capture fresh expressions of worship in every season so that all the earth might encounter Him.">
   <meta name="referrer" content="no-referrer-when-downgrade">
@@ -311,16 +311,16 @@
   <meta content="114683948562071" property="fb:profile_id">
   <meta content="1167014560625626" property="fb:app_id">
   <meta content="en_US" property="og:locale">
-  <meta content="Bethel Music" property="og:site_name">
+  <meta content="Pamela Scott Music" property="og:site_name">
   <meta content="website" property="og:type">
-  <meta content="https://bethelmusic.com/" property="og:url">
+  <meta content="https://pamelascottmusic.com//" property="og:url">
   <meta content="Worship Music, Live Events, Chords &amp; Lyrics" property="og:title">
   <meta
     content="In worship, we express who God is and who we are in Him. We capture fresh expressions of worship in every season so that all the earth might encounter Him."
     property="og:description">
   <meta content="1200" property="og:image:width">
   <meta content="630" property="og:image:height">
-  <meta content="Bethel Music" property="og:image:alt">
+  <meta content="Pamela Scott Music" property="og:image:alt">
   <meta content="https://www.linkedin.com/company/bethel-music" property="og:see_also">
   <meta content="https://en.wikipedia.org/wiki/Bethel_Music" property="og:see_also">
   <meta content="https://tidal.com/browse/artist/3902742" property="og:see_also">
@@ -344,8 +344,6 @@
   <meta name="twitter:image:width" content="1200">
   <meta name="twitter:image:height" content="630">
   <meta name="twitter:image:alt" content="Bethel Music">
-  <link href="https://bethelmusic.com/" rel="canonical">
-  <link href="https://bethelmusic.com/" rel="home">
   <link type="text/plain" href="https://bethelmusic.com/humans.txt" rel="author">
   <script type="text/javascript" defer=""
     src="./Bethel Music _ Worship Music, Live Events, Chords &amp; Lyrics_files/9b8611f6-241d-4072-9cd6-ad704b1a3c73.js.download"></script>
@@ -356,148 +354,129 @@
 </head>
 
 <body class="page-overview home nav-light topbar-active scrolled" data-anim-scroll-group="body">
-  <!-- NAVBAR -->
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+ <!-- NAVBAR -->
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    body {
-      font-family: 'Acme', sans-serif;
-      background: #fff;
-      line-height: 1.6;
-      padding-top: 70px;
-    }
+  body {
+    font-family: 'Acme', sans-serif;
+    background: #fff;
+    line-height: 1.6;
+    padding-top: 70px;
+  }
 
-    ul {
-      list-style: none;
-    }
+  ul {
+    list-style: none;
+  }
 
-    a {
-      text-decoration: none;
-    }
+  a {
+    text-decoration: none;
+  }
 
-    .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #ffffff;
-      color: #000;
-      width: 100%;
-      height: 70px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 10000;
-      padding: 0 30px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    color: #000;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    padding: 0 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
 
-    .navbar .logos img {
-      height: 50px;
-      width: auto;
-      object-fit: contain;
-    }
+  .navbar .logos img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+  }
 
-    .navbars .logos img {
-      height: 50px;
-      width: auto;
-      object-fit: contain;
-    }
+  nav {
+    margin-left: auto;
+    position: fixed;
+    padding: 20px;
+    right: -100%;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 270px;
+    height: calc(100% - 70px);
+    background: #ffffff;
+    border-left: solid 1px #ddd;
+    transition: all 0.4s ease;
+    z-index: 9999;
+  }
 
-    nav {
-      margin-left: auto;
-    }
+  nav.showNav {
+    right: 0;
+  }
 
-    .navbar .nav-link {
-      padding: 10px 25px;
-      color: #000;
-      font-size: 16px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
+  nav ul {
+    width: 100%;
+  }
 
-    .navbar .nav-link:hover {
-      color: #c08c5d;
-    }
+  .navbar .nav-link {
+    padding: 10px 25px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+    text-align: center;
+  }
 
-    .burgerContainer {
-      cursor: pointer;
-      display: none;
-      align-items: center;
-    }
+  .navbar .nav-link:hover {
+    color: #c08c5d;
+  }
 
-    .burger div {
-      width: 25px;
-      height: 3px;
-      background-color: #000;
-      margin: 5px;
-      border-radius: 25%;
-      transition: all 0.3s ease;
-    }
+  .burgerContainer {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
 
-    @media (max-width: 1200px) {
-      nav {
-        position: fixed;
-        padding: 20px;
-        right: -100%;
-        top: 70px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 270px;
-        height: calc(100% - 70px);
-        background: #ffffff;
-        border-left: solid 1px #ddd;
-        transition: all 0.4s ease;
-        z-index: 9999;
-      }
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px;
+    border-radius: 25%;
+    transition: all 0.3s ease;
+  }
+</style>
 
-      nav.showNav {
-        right: 0;
-      }
+<header class="navbar">
+  <a href="#" class="logos">
+    <img src="Pamela_logo.png" alt="Pamela Scott Music Logo" />
+  </a>
 
-      nav ul {
-        width: 100%;
-      }
+  <nav>
+    <ul>
+      <a class="nav-link" href="#">Home</a>
+      <a class="nav-link" href="#">Services</a>
+      <a class="nav-link" href="#">Contact</a>
+    </ul>
+  </nav>
 
-      .navbar .nav-link {
-        width: 100%;
-        display: block;
-        margin: 5px 0;
-        text-align: center;
-        color: #000;
-      }
-
-      .burgerContainer {
-        display: flex;
-      }
-    }
-  </style>
-
-  <header class="navbar">
-    <a href="#" class="logos">
-      <img src="Pamela_logo.png" alt="Pamela Scott Music Logo" />
-    </a>
-
-    <nav>
-      <ul>
-        <a class="nav-link" href="#">Home</a>
-        <a class="nav-link" href="#">Services</a>
-        <a class="nav-link" href="#">Contact</a>
-      </ul>
-    </nav>
-
-    <div class="burgerContainer">
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
+  <div class="burgerContainer">
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
     </div>
-  </header>
+  </div>
+</header>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
@@ -531,7 +510,7 @@
     <div class="cta">
       <h1 class="displayOne">Pamela Scott Music</h1>
       <div class="btns">
-        <a class="view view-1" href="#" target="_blank">
+        <a class="view view-1" href="https://www.youtube.com/@pamelascottmusic" target="_blank">
           <span>Listen Now</span>
         </a>
       </div>
@@ -704,26 +683,37 @@
 
 
 
-<style>
+  <!-- Slick CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+ 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+ 
     body {
       font-family: Arial, sans-serif;
       background: #f8f9fa;
       padding: 50px 0;
     }
-
+ 
     .container-fluid {
       max-width: 1200px;
       margin: auto;
       text-align: center;
+      padding: 0 20px;
     }
-
+ 
     h2 {
       font-size: 28px;
       margin-bottom: 30px;
       font-weight: bold;
       color: #333;
     }
-
+ 
     .hl-slider .slide {
       display: block;
       margin: 0 10px;
@@ -732,18 +722,29 @@
       position: relative;
       transition: transform 0.3s ease;
     }
-
+ 
     .hl-slider .slide:hover {
       transform: scale(1.03);
     }
-
-    .hl-slider img {
+ 
+    /* Responsive 16:9 iframe wrapper instead of a fixed 560x315 iframe */
+    .hl-slider .video-wrap {
+      position: relative;
       width: 100%;
-      height: 50vh;
-      object-fit: cover;
+      padding-top: 56.25%; /* 16:9 */
       border-radius: 10px;
+      overflow: hidden;
     }
-
+ 
+    .hl-slider .video-wrap iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+ 
     .hl-slider .type {
       font-size: 14px;
       font-weight: bold;
@@ -755,35 +756,41 @@
       position: absolute;
       top: 15px;
       left: 15px;
+      z-index: 2;
     }
-
+ 
     .hl-slider .title {
       font-size: 16px;
       font-weight: bold;
       margin-top: 10px;
       color: #222;
     }
-
+ 
     /* Slick arrows styling */
     .slick-prev:before, .slick-next:before {
       color: #007bff;
       font-size: 28px;
     }
-
-    /* Position arrows outside the slider */
+ 
     .slick-prev {
       left: -45px;
     }
-
+ 
     .slick-next {
       right: -45px;
     }
-
+ 
     /* Responsive */
-    @media (max-width: 768px) {
-      .hl-slider img {
-        height: 180px;
+    @media (max-width: 992px) {
+      .slick-prev {
+        left: -25px;
       }
+      .slick-next {
+        right: -25px;
+      }
+    }
+ 
+    @media (max-width: 768px) {
       h2 {
         font-size: 22px;
       }
@@ -791,53 +798,89 @@
   </style>
 </head>
 <body>
-
-  <div class="container-fluid">
+ 
+  <section class="container-fluid">
     <h2>What's New</h2>
     <div class="hl-slider">
-
-       <a class="slide" href="https://www.youtube.com/embed/zvgbYwYdEak?si=laVDRLZysaEPcZ2f" target="_blank">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/zvgbYwYdEak?si=laVDRLZysaEPcZ2f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <!-- <div class="type">Album Release</div> -->
+ 
+      <div class="slide">
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/zvgbYwYdEak?si=laVDRLZysaEPcZ2f"
+            title="What A Beautiful Name (Cover)"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
         <div class="title">What A Beautiful Name (Cover)</div>
-      </a>
-
-      <a class="slide" href="hhttps://www.youtube.com/embed/Sd4pihxGUv8?si=SKFUUE_KANtqcgT0" target="_blank">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Sd4pihxGUv8?si=SKFUUE_KANtqcgT0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <!-- <div class="type">New EP</div> -->
+      </div>
+ 
+      <div class="slide">
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/Sd4pihxGUv8?si=SKFUUE_KANtqcgT0"
+            title="Rest - Pamela Scott"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
         <div class="title">Rest - Pamela Scott</div>
-      </a>
-
-      <a class="slide" href="https://www.youtube.com/embed/nJ9XsiaIpAY?si=12-xTWNcSacdt_o6" target="_blank">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/nJ9XsiaIpAY?si=12-xTWNcSacdt_o6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <!-- <div class="type">Listen</div> -->
+      </div>
+ 
+      <div class="slide">
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/nJ9XsiaIpAY?si=12-xTWNcSacdt_o6"
+            title="REST"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
         <div class="title">REST</div>
-      </a>
-
-      <a class="slide" href="https://www.youtube.com/embed/vcEHEzud0as?si=ULb5f0u9_R1Uzdlq" target="_blank">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/vcEHEzud0as?si=ULb5f0u9_R1Uzdlq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <!-- <div class="type">New Single</div> -->
+      </div>
+ 
+      <div class="slide">
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/vcEHEzud0as?si=ULb5f0u9_R1Uzdlq"
+            title="Since I was born - Pamela Scott"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
         <div class="title">Since I was born - Pamela Scott</div>
-      </a>
-
-      <a class="slide" href="https://www.youtube.com/embed/LDklAEfCy5k?si=HhtBjXNQm4x9GvDM" target="_blank">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/LDklAEfCy5k?si=HhtBjXNQm4x9GvDM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <!-- <div class="type">Listen</div> -->
+      </div>
+ 
+      <div class="slide">
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/LDklAEfCy5k?si=HhtBjXNQm4x9GvDM"
+            title="Nigeria National Anthem - Pamela Scott"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
         <div class="title">Nigeria National Anthem - Pamela Scott</div>
-      </a>
+      </div>
+ 
     </div>
-  </div>
-
-  <!-- Slick JS -->
+  </section>
+ 
+  <!-- jQuery + Slick JS -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+ 
   <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
       $('.hl-slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,     // autoplaying multiple embedded videos at once is not recommended
         autoplaySpeed: 3000,
         arrows: true,
         dots: false,
@@ -852,7 +895,9 @@
           {
             breakpoint: 600,
             settings: {
-              slidesToShow: 1
+              slidesToShow: 1,
+              arrows: false,
+              dots: true
             }
           }
         ]
@@ -1149,7 +1194,7 @@
       <div class="row">
         <div class="col-12">
           <div class="navbars">
-            <a href="#" class="logos">
+            <a href="" class="logos">
       <img src="IMG_6183.JPG" alt="Pamela Scott Music Logo" />
     </a>
           </div>
@@ -1164,19 +1209,19 @@
               <div id="footNav1" class="collapse">
                 <ul>
                   <li>
-                    <a href="#" class="is-active" data-turbo="false"
+                    <a href="https://www.youtube.com/@pamelascottmusic" class="is-active" data-turbo="false"
                       onclick="">Pamela Scott Music</a>
                   </li>
                   
                   <li>
-                    <a href="#" data-turbo="false"
+                    <a href="https://www.youtube.com/@pamelascottmusic" data-turbo="false"
                       onclick="">Music</a>
                   </li>
-                  <li>
+                  <!-- <li>
                     <a href="#" data-turbo="false"
                       onclick="">Tours
                       &amp; Events</a>
-                  </li>
+                  </li> -->
                   
                 </ul>
               </div>
@@ -1268,7 +1313,7 @@
         <div class="row align-items-center">
           <div class="col-12 col-md-6 order-2 order-md-1 foot-copyright">
             <hr class="d-block d-md-none">
-            <span class="copyright">Copyright © 2025 Pamela Scott Music</span>
+            <span class="copyright">Copyright © 2026 Pamela Scott Music</span>
             <a href="#s" data-turbo="false"
               onclick="">Terms
               of Use</a>
