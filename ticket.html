@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Get Your Free Ticket - Pamela Scott Music</title>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="format-detection" content="telephone=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="author" content="">
+	    <meta name="keywords" content="">
+	    <meta name="description" content="Reserve your free ticket. Limited capacity, registration required.">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+	    <link rel="stylesheet" type="text/css" href="style.css">
+	    <link rel="stylesheet" type="text/css" href="fonts/icomoon/icomoon.css">
+	    <link rel="stylesheet" type="text/css" href="aos/aos.css">
+	    <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
+
+	<style>
+		/* ---- Ticket page specific styles (kept consistent with theme variables) ---- */
+
+		#ticket-hero {
+			position: relative;
+			width: 100%;
+			min-height: 420px;
+			background: url(images/banner.jpg) no-repeat center center;
+			background-size: cover;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			padding: 6em 20px;
+		}
+		#ticket-hero::before {
+			content: "";
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			background: rgba(17,17,17,0.55);
+		}
+		#ticket-hero .hero-inner {
+			position: relative;
+			z-index: 2;
+			max-width: 700px;
+			margin: 0 auto;
+		}
+		#ticket-hero .hero-inner span.eyebrow {
+			display: inline-block;
+			color: #d1d0ce;
+			letter-spacing: 3px;
+			font-size: 0.85em;
+			text-transform: uppercase;
+			margin-bottom: 15px;
+		}
+		#ticket-hero .hero-inner h1 {
+			font-size: 3em;
+			color: #fff;
+			margin-bottom: 15px;
+		}
+		#ticket-hero .hero-inner p.sub {
+			color: #d1d0ce;
+			font-size: 1.1em;
+			margin-bottom: 30px;
+			letter-spacing: 0.5px;
+		}
+		#ticket-hero .btn-common {
+			font-size: 1.3em;
+			padding: 0.6em 2.5em;
+			border-radius: 2em;
+			color: #fff;
+			border: 3px solid #fff;
+			display: inline-block;
+			text-transform: uppercase;
+		}
+		#ticket-hero .btn-common:hover {
+			color: #111;
+			background: #fff;
+		}
+
+		/* Why register strip */
+		.why-register {
+			background: #d1d0ce;
+			padding: 4em 0;
+		}
+		.why-register .why-grid {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			text-align: center;
+		}
+		.why-register .why-item {
+			width: 22%;
+			min-width: 180px;
+			margin: 15px 20px;
+		}
+		.why-register .why-item i {
+			font-size: 2em;
+			color: #776c6e;
+			display: block;
+			margin-bottom: 12px;
+		}
+		.why-register .why-item strong {
+			display: block;
+			text-transform: uppercase;
+			font-family: Oswald, sans-serif;
+			letter-spacing: 1px;
+			color: #111;
+			margin-bottom: 6px;
+		}
+		.why-register .why-item span {
+			font-size: 0.9em;
+			color: #444;
+		}
+
+		/* Event details */
+		.event-details {
+			padding: 5em 0;
+			background: #fff;
+		}
+		.event-details .details-grid {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			max-width: 900px;
+			margin: 40px auto 0;
+		}
+		.event-details .detail-box {
+			width: 45%;
+			min-width: 240px;
+			margin: 15px 2.5%;
+			padding: 25px;
+			border: 1px solid #e2e2e2;
+			text-align: center;
+		}
+		.event-details .detail-box label {
+			display: block;
+			font-size: 12px;
+			letter-spacing: 2px;
+			color: #a7a7a7;
+			text-transform: uppercase;
+			margin-bottom: 8px;
+		}
+		.event-details .detail-box strong {
+			display: block;
+			font-family: Oswald, sans-serif;
+			font-size: 1.2em;
+			color: #111;
+			text-transform: uppercase;
+		}
+
+		/* Registration form section */
+		.registration-section {
+			background: #111;
+			padding: 5em 0;
+		}
+		.registration-section .section-title,
+		.registration-section h4 {
+			color: #fff;
+		}
+		.registration-section .form-wrap {
+			max-width: 640px;
+			margin: 40px auto 0;
+			background: #1c1c1c;
+			padding: 40px;
+			border: 1px solid #333;
+		}
+		.registration-section .form-wrap iframe {
+			width: 100%;
+			min-height: 600px;
+			border: 0;
+		}
+		.registration-section .fallback-note {
+			color: #a7a7a7;
+			text-align: center;
+			font-size: 0.85em;
+			margin-top: 20px;
+		}
+
+		/* FAQ */
+		.ticket-faq {
+			padding: 5em 0;
+			background: #f7f7f6;
+		}
+		.ticket-faq .faq-list {
+			max-width: 800px;
+			margin: 40px auto 0;
+		}
+		.ticket-faq .faq-item {
+			border-bottom: 1px solid #ddd;
+			padding: 20px 0;
+		}
+		.ticket-faq .faq-item h5 {
+			text-transform: none;
+			font-family: Oswald, sans-serif;
+			font-size: 1.1em;
+			color: #111;
+			margin-bottom: 8px;
+			letter-spacing: 0;
+		}
+		.ticket-faq .faq-item p {
+			color: #555;
+			margin: 0;
+		}
+
+		@media only screen and (max-width: 767px) {
+			#ticket-hero .hero-inner h1 { font-size: 2.2em; }
+			.why-register .why-item { width: 100%; }
+			.event-details .detail-box { width: 100%; margin: 10px 0; }
+			.registration-section .form-wrap { padding: 25px; }
+		}
+	</style>
+</head>
+<body>
+<div id="body-wrapper">
+
+
+	<div id="header-wrap">
+
+		<header class="header">
+			<div class="container-md">
+				<nav class="navbar navbar-expand-lg">
+					<div class="nav-brand">
+						<a href="index.html">
+							<img style="width: 70px;" src="images/main-logo.png" alt="logo">
+						</a>
+					</div>
+
+					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#slide-navbar-collapse" aria-controls="slide-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+						<a href="javascript:void(0)" onclick="openNav()"><i class="icon icon-navicon"></i></a>
+					</button>
+					<div class="navbar-collapse collapse" id="slide-navbar-collapse">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a href="index.html" class="navlink">Home</a></li>
+						<li class="nav-item"><a href="index.html#tour-concert">Tour & Concerts</a></li>
+						<li class="nav-item"><a href="index.html#video">Videos</a></li>
+						<li class="nav-item active"><a href="tickets.html">Get Ticket</a></li>
+					</ul>
+						<div class="social-block">
+							<div class="social-icon">
+								<a href="facebook.com">
+									<i class="icon icon-facebook"></i>
+								</a>
+								<a href="twitter.com">
+									<i class="icon icon-twitter"></i>
+								</a>
+								<a href="instagram.com">
+									<i class="icon icon-instagram"></i>
+								</a>
+							</div>
+						</div><!--social-block-->
+					</div><!--navbar-collapse-->
+				</nav>
+			</div>
+		</header>
+
+	</div><!--header-wrap-->
+
+
+	<!-- ================= HERO ================= -->
+	<section id="ticket-hero">
+		<div class="hero-inner" data-aos="fade-up">
+			<span class="eyebrow">Free Live Concert</span>
+			<h1>Reserve Your Free Ticket</h1>
+			<p class="sub">Limited capacity &bull; Registration required for entry</p>
+			<a href="#register" class="btn-common"><span>Get My Free Ticket</span></a>
+		</div>
+	</section>
+
+
+	<!-- ================= WHY REGISTER ================= -->
+	<section class="why-register" data-aos="fade-up">
+		<div class="container">
+			<div class="section-header text-center" style="padding: 0 0 20px;">
+				<h2 class="section-title" style="font-size: 2.2em;">Why Register?</h2>
+			</div>
+			<div class="why-grid">
+				<div class="why-item">
+					<i class="icon icon-ticket"></i>
+					<strong>Free Entry</strong>
+					<span>No cost, just register to save your spot</span>
+				</div>
+				<div class="why-item">
+					<i class="icon icon-bell"></i>
+					<strong>Event Reminders</strong>
+					<span>WhatsApp & email updates before showtime</span>
+				</div>
+				<div class="why-item">
+					<i class="icon icon-users"></i>
+					<strong>Limited Seats</strong>
+					<span>First come, first served capacity</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- ================= EVENT DETAILS ================= -->
+	<section class="event-details" data-aos="fade-up">
+		<div class="container">
+			<div class="section-header text-center">
+				<h2 class="section-title">Event Details</h2>
+				<h4>Everything you need to know before the show</h4>
+			</div>
+			<div class="details-grid">
+				<div class="detail-box">
+					<label>Date</label>
+					<strong>[Insert Date]</strong>
+				</div>
+				<div class="detail-box">
+					<label>Time</label>
+					<strong>Doors 7:00PM &bull; Show 8:00PM</strong>
+				</div>
+				<div class="detail-box">
+					<label>Venue</label>
+					<strong>[Insert Venue, Port Harcourt]</strong>
+				</div>
+				<div class="detail-box">
+					<label>Dress Code</label>
+					<strong>[Insert Dress Code]</strong>
+				</div>
+				<div class="detail-box">
+					<label>Parking</label>
+					<strong>[Insert Parking Info]</strong>
+				</div>
+				<div class="detail-box">
+					<label>Contact</label>
+					<strong>[Insert Phone / WhatsApp]</strong>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- ================= REGISTRATION FORM ================= -->
+	<section id="register" class="registration-section" data-aos="fade-up">
+		<div class="container">
+			<div class="section-header text-center">
+				<h2 class="section-title">Reserve Your Spot</h2>
+				<h4>Fill the form below &mdash; for reservations</h4>
+			</div>
+			<div class="form-wrap">
+				<!--
+					Replace the src below with your live Tally form embed URL.
+					Tally gives you an embed link like: https://tally.so/embed/XXXXXX
+				-->
+				<iframe data-tally-src="https://tally.so/embed/NpxbXW?hideTitle=1&dynamicHeight=1" loading="lazy" width="100%" height="1126" frameborder="0" marginheight="0" marginwidth="0" title="Reserve Your Free Spot"></iframe>
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+			</div>
+			<p class="fallback-note">Having trouble with the form? Reach us directly on WhatsApp at [Insert Number].</p>
+		</div>
+	</section>
+
+
+	<!-- ================= FAQ ================= -->
+	<section class="ticket-faq" data-aos="fade-up">
+		<div class="container">
+			<div class="section-header text-center">
+				<h2 class="section-title">Frequently Asked Questions</h2>
+			</div>
+			<div class="faq-list">
+				<div class="faq-item">
+					<h5>Is this event really free?</h5>
+					<p>Yes, entry is completely free. Registration is required because seating is limited.</p>
+				</div>
+				<div class="faq-item">
+					<h5>What happens if I register but can't attend?</h5>
+					<p>Please let us know via WhatsApp so we can free up your spot for someone on the waitlist.</p>
+				</div>
+				<div class="faq-item">
+					<h5>Is my spot guaranteed?</h5>
+					<p>Spots are held until 7:30PM on the day of the show. After that, unclaimed seats are released to walk-ins.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<footer id="footer" data-aos="fade-up">
+		<div class="container">
+			<div class="row">
+				<div class="wpb_column align-center">
+					<div class="social-links">
+						<ul>
+							<li class="mr-3"><a href="#"><i class="icon icon-facebook"></i></a></li>
+							<li class="mr-3"><a href="#"><i class="icon icon-github"></i></a></li>
+							<li class="mr-3"><a href="#"><i class="icon icon-google-plus"></i></a></li>
+							<li class="mr-3"><a href="#"><i class="icon icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon icon-twitter"></i></a></li>
+						</ul>
+					</div><!--social-links-->
+					<div class="widget_nav_menu">
+						<ul class="footer-menu">
+							<li class="menu-item">
+								<a href="index.html">Home</a>
+							</li>
+							<li class="menu-item">
+								<a href="tickets.html">Get Ticket</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Features</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Blog</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Portfolio</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Contact</a>
+							</li>
+						</ul>
+					</div><!--widget_nav_menu-->
+					<div class="copyright">
+						<p>Copyright &copy; PAMELA SCOTT MUSIC</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</div>
+
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="aos/aos.js"></script>
+	<script type="text/javascript" src="slick/slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>
