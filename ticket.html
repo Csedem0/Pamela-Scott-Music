@@ -238,14 +238,14 @@
 					</ul>
 						<div class="social-block">
 							<div class="social-icon">
-								<a href="facebook.com">
+								<a href="https://www.facebook.com/iampamelascott">
 									<i class="icon icon-facebook"></i>
 								</a>
-								<a href="twitter.com">
-									<i class="icon icon-twitter"></i>
-								</a>
-								<a href="instagram.com">
+								<a href="https://www.instagram.com/pamelascottmusic">
 									<i class="icon icon-instagram"></i>
+								</a>
+								<a href="https://www.tiktok.com/@pamelascottmusic">
+									<i class="icon icon-twitter"></i>
 								</a>
 							</div>
 						</div><!--social-block-->
@@ -305,27 +305,19 @@
 			<div class="details-grid">
 				<div class="detail-box">
 					<label>Date</label>
-					<strong>[Insert Date]</strong>
+					<strong>22nd Aug, 2026</strong>
 				</div>
 				<div class="detail-box">
 					<label>Time</label>
-					<strong>Doors 7:00PM &bull; Show 8:00PM</strong>
+					<strong>1:00PM - 4:00PM</strong>
 				</div>
 				<div class="detail-box">
-					<label>Venue</label>
-					<strong>[Insert Venue, Port Harcourt]</strong>
-				</div>
-				<div class="detail-box">
-					<label>Dress Code</label>
-					<strong>[Insert Dress Code]</strong>
-				</div>
-				<div class="detail-box">
-					<label>Parking</label>
-					<strong>[Insert Parking Info]</strong>
+					<label>Location</label>
+					<strong>Port Harcourt</strong>
 				</div>
 				<div class="detail-box">
 					<label>Contact</label>
-					<strong>[Insert Phone / WhatsApp]</strong>
+					<strong>+447919 196026</strong>
 				</div>
 			</div>
 		</div>
@@ -382,37 +374,29 @@
 				<div class="wpb_column align-center">
 					<div class="social-links">
 						<ul>
-							<li class="mr-3"><a href="#"><i class="icon icon-facebook"></i></a></li>
-							<li class="mr-3"><a href="#"><i class="icon icon-github"></i></a></li>
-							<li class="mr-3"><a href="#"><i class="icon icon-google-plus"></i></a></li>
-							<li class="mr-3"><a href="#"><i class="icon icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon icon-twitter"></i></a></li>
+							<li class="mr-3"><a href="https://www.facebook.com/iampamelascott"><i class="icon icon-facebook"></i></a></li>
+							<li class="mr-3"><a href="https://www.instagram.com/pamelascottmusic"><i class="icon icon-instagram"></i></a></li>
+							<li><a href="https://www.tiktok.com/@pamelascottmusic"><i class="icon icon-twitter"></i></a></li>
 						</ul>
 					</div><!--social-links-->
 					<div class="widget_nav_menu">
 						<ul class="footer-menu">
 							<li class="menu-item">
-								<a href="index.html">Home</a>
+								<a href="#">Home</a>
 							</li>
 							<li class="menu-item">
-								<a href="tickets.html">Get Ticket</a>
+								<a href="#tour-concert">Tour & Concerts</a>
 							</li>
 							<li class="menu-item">
-								<a href="#">Features</a>
+								<a href="#video">Videos</a>
 							</li>
 							<li class="menu-item">
-								<a href="#">Blog</a>
-							</li>
-							<li class="menu-item">
-								<a href="#">Portfolio</a>
-							</li>
-							<li class="menu-item">
-								<a href="#">Contact</a>
+								<a href="/ticket.html">Get Ticket</a>
 							</li>
 						</ul>
 					</div><!--widget_nav_menu-->
 					<div class="copyright">
-						<p>Copyright &copy; PAMELA SCOTT MUSIC</p>
+						<p>Copyright &copy; pamelascottmusic</p>
 					</div>
 				</div>
 			</div>
@@ -426,6 +410,15 @@
 	<script type="text/javascript" src="aos/aos.js"></script>
 	<script type="text/javascript" src="slick/slick/slick.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
-
+    <script>
+	$(document).ready(function () {
+	// Close the mobile nav overlay the instant a link is tapped,
+	// so it never has to be "reachable" after the page scrolls.
+	$('.navbar-nav .nav-item a').on('click', function () {
+		$('#slide-navbar-collapse').collapse('hide');
+		$('.navbar-toggler').addClass('collapsed').attr('aria-expanded', 'false');
+	});
+	});
+	</script>
 </body>
 </html>
