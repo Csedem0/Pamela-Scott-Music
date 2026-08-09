@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Music - Pamela Scott Music</title>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="format-detection" content="telephone=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="author" content="">
+	    <meta name="keywords" content="">
+	    <meta name="description" content="Listen to the latest albums, EPs and singles.">
+		<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+	    <link rel="stylesheet" type="text/css" href="/style.css">
+	    <link rel="stylesheet" type="text/css" href="/fonts/icomoon/icomoon.css">
+	    <link rel="stylesheet" type="text/css" href="/aos/aos.css">
+	    <link rel="stylesheet" type="text/css" href="/slick/slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="/slick/slick/slick-theme.css"/>
+
+	<style>
+		/* ---- Music page specific styles ---- */
+
+		/* Top "Listen Now" sticky banner */
+		#listen-banner {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background: #111;
+			color: #fff;
+			padding: 10px 20px;
+			position: relative;
+			z-index: 50;
+		}
+		#listen-banner .banner-left {
+			display: flex;
+			align-items: center;
+		}
+		#listen-banner .banner-art {
+			width: 44px;
+			height: 44px;
+			border-radius: 4px;
+			background: #776c6e;
+			margin-right: 12px;
+			flex-shrink: 0;
+		}
+		#listen-banner .banner-text label {
+			display: block;
+			font-size: 10px;
+			letter-spacing: 1.5px;
+			color: #a7a7a7;
+			text-transform: uppercase;
+			margin: 0;
+		}
+		#listen-banner .banner-text strong {
+			display: block;
+			font-family: Oswald, sans-serif;
+			font-size: 0.95em;
+			text-transform: none;
+			color: #fff;
+		}
+		#listen-banner .banner-right {
+			display: flex;
+			align-items: center;
+		}
+		#listen-banner a.listen-now {
+			color: #d1d0ce;
+			font-size: 12px;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+			margin-right: 20px;
+			font-weight: 700;
+		}
+		#listen-banner a.listen-now:hover {
+			color: #776c6e;
+		}
+		#listen-banner .banner-close {
+			cursor: pointer;
+			color: #a7a7a7;
+			font-size: 20px;
+			line-height: 1;
+			background: none;
+			border: none;
+		}
+		#listen-banner .banner-close:hover {
+			color: #fff;
+		}
+
+		/* Video hero */
+		#music-hero {
+			position: relative;
+			width: 100%;
+			background: #000;
+		}
+		#music-hero .hero-media {
+			position: relative;
+			width: 100%;
+			max-width: 1220px;
+			margin: 0 auto;
+			aspect-ratio: 16 / 9;
+			overflow: hidden;
+		}
+		#music-hero .hero-media img.hero-bg {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+		#music-hero .genre-tag {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			background: rgba(17,17,17,0.75);
+			color: #fff;
+			padding: 10px 18px;
+			border-radius: 30px;
+			display: flex;
+			align-items: center;
+			font-family: Oswald, sans-serif;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 0.9em;
+			z-index: 3;
+		}
+		#music-hero .genre-tag span.dot {
+			width: 26px;
+			height: 26px;
+			border-radius: 50%;
+			background: #776c6e;
+			display: inline-block;
+			margin-right: 10px;
+		}
+		#music-hero .play-overlay {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 76px;
+			height: 76px;
+			border-radius: 50%;
+			background: rgba(197,157,95,0.9);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			z-index: 3;
+			transition: all 0.3s ease;
+		}
+		#music-hero .play-overlay:hover {
+			background: #776c6e;
+			transform: translate(-50%, -50%) scale(1.08);
+		}
+		#music-hero .play-overlay::after {
+			content: "";
+			border-style: solid;
+			border-width: 14px 0 14px 22px;
+			border-color: transparent transparent transparent #fff;
+			margin-left: 6px;
+		}
+		#music-hero .hero-caption {
+			position: absolute;
+			bottom: 25px;
+			left: 25px;
+			z-index: 3;
+			color: #fff;
+		}
+		#music-hero .hero-caption h2 {
+			font-size: 1.6em;
+			color: #fff;
+			text-transform: uppercase;
+			margin-bottom: 4px;
+		}
+		#music-hero .hero-caption span {
+			font-size: 0.85em;
+			letter-spacing: 1px;
+			color: #d1d0ce;
+			text-transform: uppercase;
+		}
+		#music-hero .watch-youtube {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			background: rgba(17,17,17,0.55);
+			color: #fff;
+			text-align: right;
+			padding: 14px 25px;
+			font-family: Oswald, sans-serif;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 0.85em;
+			z-index: 2;
+		}
+		#music-hero iframe {
+			width: 100%;
+			height: 100%;
+			display: block;
+			border: 0;
+		}
+
+		/* Discography (tabs + carousel) */
+		.discography {
+			padding: 4em 0 5em;
+			background: #fff;
+		}
+		.discography .disco-tabs {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			max-width: 1220px;
+			margin: 0 auto 30px;
+			padding: 0 15px;
+			flex-wrap: wrap;
+		}
+		.discography .tab-links {
+			display: flex;
+			list-style: none;
+			margin: 0;
+		}
+		.discography .tab-links li {
+			margin: 0 25px 0 0;
+		}
+		.discography .tab-links button {
+			background: none;
+			border: none;
+			padding: 6px 0;
+			font-family: Oswald, sans-serif;
+			font-size: 1.2em;
+			text-transform: capitalize;
+			color: #a7a7a7;
+			cursor: pointer;
+			border-bottom: 3px solid transparent;
+		}
+		.discography .tab-links button.active {
+			color: #111;
+			border-bottom-color: #776c6e;
+		}
+		.discography .carousel-arrows button {
+			background: none;
+			border: 1px solid #ddd;
+			width: 34px;
+			height: 34px;
+			border-radius: 50%;
+			margin-left: 8px;
+			cursor: pointer;
+			color: #776c6e;
+			font-size: 1em;
+		}
+		.discography .carousel-arrows button:hover {
+			background: #776c6e;
+			color: #fff;
+			border-color: #776c6e;
+		}
+		.discography .disco-track {
+			max-width: 1220px;
+			margin: 0 auto;
+			padding: 0 15px;
+		}
+		.discography .disco-scroll {
+			display: flex;
+			overflow-x: auto;
+			gap: 25px;
+			scroll-behavior: smooth;
+			padding-bottom: 10px;
+		}
+		.discography .disco-scroll::-webkit-scrollbar {
+			height: 6px;
+		}
+		.discography .disco-scroll::-webkit-scrollbar-thumb {
+			background: #d1d0ce;
+			border-radius: 3px;
+		}
+		.discography .release-card {
+			flex: 0 0 260px;
+			text-align: left;
+		}
+		.discography .release-art {
+			width: 100%;
+			height: 260px;
+			border-radius: 4px;
+			position: relative;
+			overflow: hidden;
+			background: linear-gradient(135deg, #776c6e 0%, #3c3638 100%);
+			display: flex;
+			align-items: flex-end;
+			justify-content: flex-start;
+			padding: 15px;
+		}
+		.discography .release-art span.art-label {
+			color: rgba(255,255,255,0.85);
+			font-family: Oswald, sans-serif;
+			text-transform: uppercase;
+			font-size: 1.1em;
+			letter-spacing: 1px;
+			line-height: 1.2;
+		}
+		.discography .release-card:nth-child(3n+2) .release-art {
+			background: linear-gradient(135deg, #92827c 0%, #111 100%);
+		}
+		.discography .release-card:nth-child(3n+3) .release-art {
+			background: linear-gradient(135deg, #c59d5f 0%, #776c6e 100%);
+		}
+		.discography .release-meta {
+			padding-top: 14px;
+		}
+		.discography .release-meta .artist {
+			display: block;
+			font-size: 0.85em;
+			color: #776c6e;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			margin-bottom: 4px;
+		}
+		.discography .release-meta strong {
+			display: block;
+			font-family: Oswald, sans-serif;
+			font-size: 1.15em;
+			color: #111;
+			text-transform: none;
+			line-height: 1.25;
+			margin-bottom: 6px;
+		}
+		.discography .release-meta .year {
+			font-size: 0.85em;
+			color: #a7a7a7;
+		}
+
+		/* Resources */
+		.resources-section {
+			background: #f7f7f6;
+			padding: 4em 0 5em;
+		}
+		.resources-section .section-title {
+			font-size: 1.6em;
+			border-bottom: 2px solid #111;
+			display: inline-block;
+			padding-bottom: 10px;
+		}
+		.resources-section .resource-grid {
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: 35px;
+			gap: 25px;
+		}
+		.resources-section .resource-card {
+			flex: 1 1 280px;
+			background: #fff;
+			border: 1px solid #e6e6e6;
+			padding: 25px;
+		}
+		.resources-section .resource-card h5 {
+			text-transform: none;
+			font-family: Oswald, sans-serif;
+			color: #111;
+			margin-bottom: 8px;
+		}
+		.resources-section .resource-card p {
+			color: #666;
+			font-size: 0.9em;
+			margin-bottom: 15px;
+		}
+		.resources-section .resource-card a {
+			font-size: 12px;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+			color: #776c6e;
+			font-weight: 700;
+		}
+		.resources-section .resource-card a:hover {
+			color: #111;
+		}
+
+		@media only screen and (max-width: 767px) {
+			#listen-banner .banner-right a.listen-now { margin-right: 12px; font-size: 10px; }
+			.discography .tab-links li { margin-right: 15px; }
+			.discography .tab-links button { font-size: 1em; }
+			.discography .release-card { flex: 0 0 200px; }
+			.discography .release-art { height: 200px; }
+		}
+	</style>
+</head>
+<body>
+<div id="body-wrapper">
+
+
+	<!-- ================= LISTEN NOW BANNER ================= -->
+	<div id="listen-banner">
+		<div class="banner-left">
+			<div class="banner-art"></div>
+			<div class="banner-text">
+				<label>Pamela Scott Music</label>
+				<strong>Latest Single Out Now</strong>
+			</div>
+		</div>
+		<div class="banner-right">
+			<a href="#music-hero" class="listen-now">Listen Now</a>
+			<button class="banner-close" onclick="document.getElementById('listen-banner').style.display='none';">&times;</button>
+		</div>
+	</div>
+
+
+	<div id="header-wrap" style="padding: 20px 0;">
+
+		<header class="header">
+			<div class="container-md">
+				<nav class="navbar navbar-expand-lg">
+					<div class="nav-brand">
+						<a href="index.html">
+							<img style="width: 70px;" src="/images/main-logo.png" alt="logo">
+						</a>
+					</div>
+
+					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#slide-navbar-collapse" aria-controls="slide-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+						<a href="javascript:void(0)" onclick="openNav()"><i class="icon icon-navicon"></i></a>
+					</button>
+					<div class="navbar-collapse collapse" id="slide-navbar-collapse">
+					<ul class="navbar-nav">
+						<li class="nav-item active"><a href="#" class="navlink">Home</a></li>
+						<li class="nav-item"><a href="#tour-concert">Tour & Concerts</a></li>
+						<li class="nav-item"><a href="#video">Videos</a></li>
+						<li class="nav-item"><a href="/music.html">Music</a></li>
+						<li class="nav-item"><a href="/ticket.html">Get Ticket</a></li>
+						<li class="nav-item"><a href="/about.html">About</a></li>s
+					</ul>
+						<div class="social-block">
+							<div class="social-icon">
+								<a href="facebook.com">
+									<i class="icon icon-facebook"></i>
+								</a>
+								<a href="twitter.com">
+									<i class="icon icon-twitter"></i>
+								</a>
+								<a href="instagram.com">
+									<i class="icon icon-instagram"></i>
+								</a>
+							</div>
+						</div>social-block
+					</div><!--navbar-collapse-->
+				</nav>
+			</div>
+		</header>
+
+	</div><!--header-wrap-->
+
+
+	<!-- ================= VIDEO HERO ================= -->
+	<section id="music-hero" data-aos="fade-up">
+		<div class="hero-media">
+			<div class="genre-tag"><span class="dot"></span> Music</div>
+
+			<!-- Swap this iframe src for your latest video/live performance -->
+			<iframe src="https://www.youtube.com/embed/nJ9XsiaIpAY" title="Latest video" allowfullscreen></iframe>
+
+			<div class="hero-caption">
+				<h2>Home &mdash; Live</h2>
+				<span>From the album &ldquo;Zion&rdquo;</span>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- ================= DISCOGRAPHY ================= -->
+	<section class="discography" data-aos="fade-up">
+		<div class="disco-tabs">
+			<ul class="tab-links">
+				<li><button type="button" class="tab-btn active" data-tab="albums">Albums</button></li>
+				<li><button type="button" class="tab-btn" data-tab="eps">EPs</button></li>
+				<li><button type="button" class="tab-btn" data-tab="singles">Singles</button></li>
+			</ul>
+			<div class="carousel-arrows">
+				<button type="button" class="disco-prev" aria-label="Scroll left">&#10094;</button>
+				<button type="button" class="disco-next" aria-label="Scroll right">&#10095;</button>
+			</div>
+		</div>
+
+		<div class="disco-track">
+
+			<!-- Albums -->
+			<div class="tab-panel disco-scroll" data-panel="albums">
+				<div class="release-card">
+					<div class="release-art"><span class="art-label">Zion</span></div>
+					<div class="release-meta">
+						<span class="artist">Pamela Scott</span>
+						<strong>Zion</strong>
+						<span class="year">2024</span>
+					</div>
+				</div>
+				<div class="release-card">
+					<div class="release-art"><span class="art-label">Of Dirt<br>&amp; Grace</span></div>
+					<div class="release-meta">
+						<span class="artist">Pamela Scott</span>
+						<strong>Of Dirt and Grace: Live</strong>
+						<span class="year">2023</span>
+					</div>
+				</div>
+				<div class="release-card">
+					<div class="release-art"><span class="art-label">Are We<br>There Yet</span></div>
+					<div class="release-meta">
+						<span class="artist">Pamela Scott</span>
+						<strong>Are We There Yet? (Expanded)</strong>
+						<span class="year">2023</span>
+					</div>
+				</div>
+				<div class="release-card">
+					<div class="release-art"><span class="art-label">Wonder</span></div>
+					<div class="release-meta">
+						<span class="artist">Pamela Scott</span>
+						<strong>Wonder</strong>
+						<span class="year">2022</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- EPs -->
+			<div class="tab-panel disco-scroll" data-panel="eps" style="display:none;">
+				<div class="release-card">
+					<div class="release-art"><span class="art-label">Still</span></div>
+					<div class="release-meta">
+						<span class="artist">Pamela Scott</span>
+						<strong>Still</strong>
+						<span class="year">2021</span>
+					</div>
+				</div>
+				<div class="release-card">
+					<div class="release-art"><span class="art-label">Sessions</span></div>
+					<div class="release-meta">
+						<span class="artist">Pamela Scott</span>
+						<strong>Acoustic Sessions</strong>
+						<span class="year">2020</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Singles -->
+			<div class="tab-panel disco-scroll" data-panel="singles" style="display:none;">
+				<div class="release-card">
+					<div class="release-art"><span class="art-label">Home</span></div>
+					<div class="release-meta">
+						<span class="artist">Pamela Scott</span>
+						<strong>Home &mdash; Live</strong>
+						<span class="year">2024</span>
+					</div>
+				</div>
+				<div class="release-card">
+					<div class="release-art"><span class="art-label">Love<br>Songs</span></div>
+					<div class="release-meta">
+						<span class="artist">Pamela Scott</span>
+						<strong>Love Songs</strong>
+						<span class="year">2024</span>
+					</div>
+				</div>
+				<div class="release-card">
+					<div class="release-art"><span class="art-label">Melody</span></div>
+					<div class="release-meta">
+						<span class="artist">Pamela Scott</span>
+						<strong>Melody Music</strong>
+						<span class="year">2023</span>
+					</div>
+				</div>
+			</div>
+
+		</div><!--disco-track-->
+	</section>
+
+
+	<!-- ================= RESOURCES ================= -->
+	<section class="resources-section" data-aos="fade-up">
+		<div class="container">
+			<h2 class="section-title">Resources</h2>
+			<div class="resource-grid">
+				<div class="resource-card">
+					<h5>Lyrics &amp; Chord Charts</h5>
+					<p>Download official lyrics and chord sheets for every release.</p>
+					<a href="#">Browse Resources</a>
+				</div>
+				<div class="resource-card">
+					<h5>Press Kit</h5>
+					<p>High-res photos, bio, and logos for media and event use.</p>
+					<a href="#">Download Press Kit</a>
+				</div>
+				<div class="resource-card">
+					<h5>Licensing</h5>
+					<p>Information on using tracks for church, film, or media projects.</p>
+					<a href="#">Licensing Info</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<footer id="footer" data-aos="fade-up">
+		<div class="container">
+			<div class="row">
+				<div class="wpb_column align-center">
+					<div class="social-links">
+						<ul>
+							<li class="mr-3"><a href="#"><i class="icon icon-facebook"></i></a></li>
+							<li class="mr-3"><a href="#"><i class="icon icon-github"></i></a></li>
+							<li class="mr-3"><a href="#"><i class="icon icon-google-plus"></i></a></li>
+							<li class="mr-3"><a href="#"><i class="icon icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon icon-twitter"></i></a></li>
+						</ul>
+					</div><!--social-links-->
+					<div class="widget_nav_menu">
+						<ul class="footer-menu">
+							<li class="menu-item">
+								<a href="index.html">Home</a>
+							</li>
+							<li class="menu-item">
+								<a href="music.html">Music</a>
+							</li>
+							<li class="menu-item">
+								<a href="tickets.html">Get Ticket</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Blog</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Contact</a>
+							</li>
+						</ul>
+					</div><!--widget_nav_menu-->
+					<div class="copyright">
+						<p>Copyright &copy; PAMELA SCOTT MUSIC</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</div>
+
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="aos/aos.js"></script>
+	<script type="text/javascript" src="slick/slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
+	<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		// Tab switching
+		var tabBtns = document.querySelectorAll('.tab-btn');
+		var panels = document.querySelectorAll('.tab-panel');
+		tabBtns.forEach(function (btn) {
+			btn.addEventListener('click', function () {
+				tabBtns.forEach(function (b) { b.classList.remove('active'); });
+				btn.classList.add('active');
+				var target = btn.getAttribute('data-tab');
+				panels.forEach(function (p) {
+					p.style.display = (p.getAttribute('data-panel') === target) ? 'flex' : 'none';
+				});
+			});
+		});
+
+		// Carousel arrows scroll the currently visible panel
+		var prevBtn = document.querySelector('.disco-prev');
+		var nextBtn = document.querySelector('.disco-next');
+		function activePanel() {
+			return document.querySelector('.tab-panel[style*="flex"]') || document.querySelector('.tab-panel[data-panel="albums"]');
+		}
+		prevBtn.addEventListener('click', function () {
+			activePanel().scrollBy({ left: -280, behavior: 'smooth' });
+		});
+		nextBtn.addEventListener('click', function () {
+			activePanel().scrollBy({ left: 280, behavior: 'smooth' });
+		});
+
+		// Close mobile nav overlay on link click (fix from earlier)
+		var navLinks = document.querySelectorAll('.navbar-nav .nav-item a');
+		navLinks.forEach(function (link) {
+			link.addEventListener('click', function () {
+				if (window.jQuery) {
+					jQuery('#slide-navbar-collapse').collapse('hide');
+				}
+				document.querySelector('.navbar-toggler').classList.add('collapsed');
+			});
+		});
+	});
+	</script>
+
+</body>
+</html>

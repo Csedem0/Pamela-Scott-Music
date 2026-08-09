@@ -1323,7 +1323,8 @@ tfoot {
 --------------------------------------------------------------*/
 #header-wrap {
   width: 100%;
-  background: url(/images/headerbg.JPG) no-repeat;
+  /* background: url(/images/headerbg.JPG) no-repeat; */
+  background-color: #000;
   padding: 30px 0;
 }
 
@@ -1373,7 +1374,7 @@ tfoot {
     font-weight: 700;
 }
 .navbar .navbar-nav li.nav-item a {
-    color: #fff;
+    color: black;
 }
 .navbar .navbar-nav li.active a,
 .navbar .navbar-nav li a:hover {
@@ -2043,4 +2044,18 @@ tfoot {
         text-align: center;
     }
 
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white; /* keep it opaque so content doesn't show through */
+}
+
+/* Push page content down so it isn't hidden under the fixed navbar */
+body {
+  padding-top: 100px; /* match this to your navbar's actual rendered height */
 }
