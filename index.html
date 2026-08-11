@@ -12,7 +12,7 @@
 	    <meta name="description" content="">
 		<meta charset="utf-8">
 		<!-- <meta http-equiv="refresh" content="0; url=https://pamelascottmusic.com/index.html"> -->
-		<link rel="canonical" href="https://pamelascottmusic.com/index.html">
+		<link rel="canonical" href="https://pamelascottmusic.com/html">
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
 	    <link rel="stylesheet" type="text/css" href="style.css">
 	    <link rel="stylesheet" type="text/css" href="fonts/icomoon/icomoon.css">
@@ -20,6 +20,181 @@
 	    <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
 		<link href="images/main-logo.png" rel="icon" sizes="32x32" type="image/png">
+		<style>
+		/* ---- Video billboard support (classes used in markup but not in base stylesheet) ---- */
+		/* #billboard { padding: 0; }
+		#billboard .video-wrap {
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			max-height: 820px;
+			overflow: hidden;
+		}
+		#billboard .bg-video {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			transform: translate(-50%, -50%);
+			object-fit: cover;
+		}
+		#billboard .video-overlay {
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			background: rgba(17,17,17,0.25);
+			z-index: 1;
+		} */
+
+		/* ---- Mini About section (Hillsong-style statement pattern) ---- */
+		.mini-about {
+			background: #fff;
+			padding: 6em 0;
+			text-align: center;
+		}
+		.mini-about .about-wrap {
+			max-width: 880px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+		.mini-about h2 {
+			font-family: Oswald, sans-serif;
+			font-weight: 600;
+			font-size: 1.9em;
+			line-height: 1.35;
+			color: #776c6e;
+			text-transform: none;
+			margin-bottom: 35px;
+			letter-spacing: 0;
+		}
+		.mini-about p {
+			font-size: 1.15em;
+			line-height: 1.9;
+			color: #555;
+			margin-bottom: 0;
+		}
+
+		/* ---- Listen to Pamela Scott (feature grid) ---- */
+		.listen-section {
+			background: #111;
+			padding: 5em 0;
+		}
+		.listen-section .section-header h2 {
+			color: #fff;
+		}
+		.listen-section .section-header h4 {
+			color: #a7a7a7;
+		}
+		.listen-grid {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 25px;
+			max-width: 1000px;
+			margin: 45px auto 0;
+			padding: 0 15px;
+		}
+		.listen-grid .listen-card {
+			flex: 0 1 440px;
+			text-decoration: none;
+		}
+		.listen-grid .listen-thumb {
+			width: 100%;
+			height: 260px;
+			border-radius: 4px;
+			position: relative;
+			overflow: hidden;
+			background: linear-gradient(135deg, #776c6e 0%, #2a2626 100%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.listen-grid .listen-card:nth-child(2) .listen-thumb {
+			background: linear-gradient(135deg, #92827c 0%, #111 100%);
+		}
+		.listen-grid .listen-card:nth-child(3) .listen-thumb {
+			background: linear-gradient(135deg, #c59d5f 0%, #776c6e 100%);
+		}
+		.listen-grid .listen-card:nth-child(4) .listen-thumb {
+			background: linear-gradient(135deg, #4a4345 0%, #776c6e 100%);
+		}
+		.listen-grid .play-badge {
+			width: 58px;
+			height: 58px;
+			border-radius: 50%;
+			background: rgba(255,255,255,0.15);
+			border: 2px solid rgba(255,255,255,0.7);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.3s ease;
+		}
+		.listen-grid .play-badge::after {
+			content: "";
+			border-style: solid;
+			border-width: 10px 0 10px 16px;
+			border-color: transparent transparent transparent #fff;
+			margin-left: 4px;
+		}
+		.listen-grid .listen-card:hover .play-badge {
+			background: #776c6e;
+			border-color: #776c6e;
+		}
+		.listen-grid .listen-title {
+			text-align: center;
+			font-family: Oswald, sans-serif;
+			font-size: 1.15em;
+			color: #fff;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			margin-top: 18px;
+		}
+
+		/* ---- Newsletter signup CTA ---- */
+		.newsletter-section {
+			background: #d1d0ce;
+			padding: 5em 0;
+			text-align: center;
+		}
+		.newsletter-section .newsletter-wrap {
+			max-width: 700px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+		.newsletter-section h2 {
+			font-size: 2.2em;
+			color: #111;
+			margin-bottom: 18px;
+		}
+		.newsletter-section p {
+			font-size: 1.05em;
+			color: #444;
+			margin-bottom: 30px;
+			line-height: 1.7;
+		}
+		.newsletter-section a.btn-common {
+			font-size: 1.2em;
+			padding: 0.6em 2.6em;
+			border-radius: 2em;
+			color: #776c6e;
+			border: 3px solid #776c6e;
+			display: inline-block;
+			text-transform: uppercase;
+		}
+		.newsletter-section a.btn-common:hover {
+			color: #d1d0ce;
+			border-color: #111;
+			background: #111;
+		}
+
+		@media only screen and (max-width: 767px) {
+			#billboard .video-wrap { height: 30vh; }
+			.mini-about h2 { font-size: 1.5em; }
+			.listen-grid .listen-card { flex: 1 1 100%; }
+		}
+	</style>
 </head>
 <body>
 <div id="body-wrapper">
@@ -77,10 +252,50 @@
 	</div><!--header-wrap-->
 
 
+<!-- ================= MINI ABOUT ================= -->
+	<section class="mini-about" data-aos="fade-up">
+		<div class="about-wrap">
+			<h2>Pamela Scott Music is rooted in the love of God and the love for people.</h2>
+			<p>I believe music is a gift &mdash; a tool to reach hearts, stir minds, and connect us to something deeper. With spirit-filled lyrics, powerful vocals and melodies that carry His presence, my mission is simple: to spread the love of God and hope, because when His love finds you, life becomes beautiful and worth living.</p>
+		</div>
+	</section>
+
+
+	<!-- ================= LISTEN TO PAMELA SCOTT ================= -->
+	<section class="listen-section" data-aos="fade-up">
+		<div class="section-header text-center">
+			<h2 class="section-title text-uppercase">Listen to Pamela Scott</h2>
+			<h4>Four songs to start with</h4>
+		</div>
+		<div class="listen-grid">
+			<a href="https://www.youtube.com/@pamelascottmusic" class="listen-card" target="_blank" rel="noopener">
+				<div class="listen-thumb"><div class="play-badge"></div></div>
+				<div class="listen-title">Rest &mdash; 2025</div>
+			</a>
+			<a href="https://www.youtube.com/@pamelascottmusic" class="listen-card" target="_blank" rel="noopener">
+				<div class="listen-thumb"><div class="play-badge"></div></div>
+				<div class="listen-title">Soldier &mdash; 2021</div>
+			</a>
+			<a href="https://www.youtube.com/@pamelascottmusic" class="listen-card" target="_blank" rel="noopener">
+				<div class="listen-thumb"><div class="play-badge"></div></div>
+				<div class="listen-title">Love Equals Jesus &mdash; 2018</div>
+			</a>
+			<a href="https://www.youtube.com/@pamelascottmusic" class="listen-card" target="_blank" rel="noopener">
+				<div class="listen-thumb"><div class="play-badge"></div></div>
+				<div class="listen-title">Flames Of Love &mdash; 2017</div>
+			</a>
+		</div>
+		<div class="btn-large text-center" style="margin: 40px;">
+			<a href="/music.html" class="btn-common"><span>See Full Discography</span></a>
+		</div>
+	</section>
+
+
+	<!-- ================= CONCERTS & EVENTS ================= -->
 	<section id="tour-concert" class="tour-concert" data-aos="fade-up">
 		<div class="container">
 			<div class="section-header text-center">
-				<h2 class="section-title">Concerts</h2>
+				<h2 class="section-title">Concerts & Events</h2>
 				<h4>Get your early discount on tickets</h4>
 			</div>
 			<div class="special-events-grid">
@@ -112,7 +327,7 @@
 					<iframe src="https://www.youtube.com/embed/vcEHEzud0as?si=p-goATuWoIlZSLuV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 			</div>			
 			
-			<div class="btn-large text-center">
+			<div class="btn-large text-center" style="text-align: center; display: flex; justify-content: center;">
 				<a href="https://www.youtube.com/@pamelascottmusic" class="btn-common"><span>Watch all videos</span></a>
 			</div>
 			<div class="secondary-title">
@@ -121,45 +336,16 @@
 		</div>
 	</section>
 
-	<section class="instagram">
-		<div class="section-header text-center">
-			<h2 class="section-title text-uppercase">I’m on Instagram</h2>
-			<span class="text-uppercase">Follow us on instagram for stories and pics</span>
+
+	<!-- ================= NEWSLETTER SIGNUP ================= -->
+	<section class="newsletter-section" data-aos="fade-up">
+		<div class="newsletter-wrap">
+			<h2>Stay Up To Date</h2>
+			<p>Stay up to date with Pamela Scott Music &mdash; receive new music updates and exclusives from Pamela Scott.</p>
+			<a href="/signup.html" class="btn-common"><span>Sign Me Up</span></a>
 		</div>
-		<div class="instagram-content" data-aos="fade-left">
-			<figure>
-				<img src="images/item1.JPG" alt="instagram">
-			</figure>
-			<figure>
-				<img src="images/item2.JPG" alt="instagram">
-			</figure>
-			<figure>
-				<img src="images/item3.JPG" alt="instagram">
-			</figure>
-			<figure>
-				<img src="images/item4.JPG" alt="instagram">
-			</figure>
-			<figure>
-				<img src="images/item5.JPG" alt="instagram">
-			</figure>
-		</div><!--instagram-content-->	
-			<div class="btn-large text-center">
-				<a href="https://www.instagram.com/pamelascottmusic" class="btn-common"><span>Follow us on Instagram</span></a>
-			</div>	
 	</section>
 
-	<!-- <section class="social-media" data-aos="fade-up">
-		<div class="container">
-			<div class="row">
-				<div class="icon-content">
-					<ul>
-						<li><a href="https://open.spotify.com/artist/0Hn79ZI2y0cHtz7efsjyX4?si=MFFNCtEWSLeODKGJ0qrD-w&utm_source=copy-link"><img src="images/spotify.png" alt="spotify"></a></li>
-						<li><a href="https://www.youtube.com/@pamelascottmusic"><img src="images/youtube.png" alt="youtube"></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section> -->
 
 	<footer id="footer" data-aos="fade-up">
 		<div class="container">
@@ -178,10 +364,13 @@
 								<a href="#">Home</a>
 							</li>
 							<li class="menu-item">
-								<a href="#tour-concert">Tour & Concerts</a>
+								<a href="/about.html">About</a>
 							</li>
 							<li class="menu-item">
-								<a href="#video">Videos</a>
+								<a href="/music.html">Music</a>
+							</li>
+							<li class="menu-item">
+								<a href="#tour-concert">Concerts & Events</a>
 							</li>
 							<li class="menu-item">
 								<a href="/ticket.html">Get Ticket</a>
@@ -189,7 +378,7 @@
 						</ul>
 					</div><!--widget_nav_menu-->
 					<div class="copyright">
-						<p>Copyright © pamelascottmusic</p>
+						<p>Copyright &copy; pamelascottmusic</p>
 					</div>
 				</div>
 			</div>
