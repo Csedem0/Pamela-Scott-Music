@@ -2062,3 +2062,108 @@ tfoot {
 body {
   padding-top: 100px; /* match this to your navbar's actual rendered height */
 }
+
+#billboard {
+    padding: 0;
+}
+#billboard .billboard-content {
+    width: 100%;
+}
+
+.video-wrap {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    min-height: 500px;
+    overflow: hidden;
+    background-color: #000; /* shows while video buffers */
+}
+
+.video-wrap .bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+/* darken video so white/light text stays readable */
+.video-wrap .video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.video-wrap .text-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 600px;
+    padding: 0 70px;
+    color: #fff;
+}
+
+.video-wrap .text-content .section-title {
+    font-size: 3em;
+    margin: 0;
+}
+
+.video-wrap .text-content p {
+    padding: 30px 0;
+}
+
+.video-wrap .button-wrap .general-button {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 991px) {
+    .video-wrap {
+        height: 80vh;
+    }
+    .video-wrap .text-content {
+        padding: 0 40px;
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .video-wrap .text-content .section-title {
+        font-size: 2.2em;
+    }
+    .video-wrap .button-wrap .general-button {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .video-wrap {
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 16 / 9;
+    }
+    .video-wrap .bg-video {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background-color: #000;
+        transform: none;
+    }
+    .video-wrap .text-content {
+        position: relative;
+        padding: 20px;
+        height: auto;
+    }
+    .video-wrap .video-overlay {
+        display: none;
+    }
+}
