@@ -11,7 +11,6 @@
 	    <meta name="keywords" content="">
 	    <meta name="description" content="">
 		<meta charset="utf-8">
-		<!-- <meta http-equiv="refresh" content="0; url=https://pamelascottmusic.com/index.html"> -->
 		<link rel="canonical" href="https://pamelascottmusic.com/html">
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
 	    <link rel="stylesheet" type="text/css" href="style.css">
@@ -20,9 +19,10 @@
 	    <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
 		<link href="images/main-logo.png" rel="icon" sizes="32x32" type="image/png">
-		<style>
+
+	<style>
 		/* ---- Video billboard support (classes used in markup but not in base stylesheet) ---- */
-		/* #billboard { padding: 0; }
+		#billboard { padding: 0; }
 		#billboard .video-wrap {
 			position: relative;
 			width: 100%;
@@ -46,7 +46,7 @@
 			top: 0; left: 0; right: 0; bottom: 0;
 			background: rgba(17,17,17,0.25);
 			z-index: 1;
-		} */
+		}
 
 		/* ---- Mini About section (Hillsong-style statement pattern) ---- */
 		.mini-about {
@@ -160,7 +160,6 @@
 			margin-top: 18px;
 		}
 
-
 		/* ---- Newsletter signup CTA ---- */
 		.newsletter-section {
 			background: #d1d0ce;
@@ -199,7 +198,7 @@
 		}
 
 		@media only screen and (max-width: 767px) {
-			#billboard .video-wrap { height: 30vh; }
+			#billboard .video-wrap { height: 70vh; }
 			.mini-about h2 { font-size: 1.5em; }
 			.listen-grid .listen-card { flex: 1 1 100%; }
 		}
@@ -239,29 +238,18 @@
 		</header>
 
 		<section id="billboard">
-    <div class="billboard-content">
-        <div class="video-wrap">
-            <video class="bg-video" src="images/REST.mp4" autoplay muted loop playsinline ></video>
-            <div class="video-overlay"></div>
-
-            <!-- <div class="text-content">
-                <h2 class="section-title">Gospel Praise</h2>
-                <p>Celebrate God's goodness with vibrant praise and inspiring gospel music that fills every heart with joy.</p>
-                <div class="button-wrap">
-                    <div class="general-button">
-                        <a href="https://open.0l.spotify.com/artist/0Hn79ZI2y0cHtz7efsjyX4?si=MFFNCtEWSLeODKGJ0qrD-w&utm_source=copy-link" class="button btn-hvr-sweep-effects dark-hvr-bg">Stream on Spotify</a>
-                        <a href="https://www.youtube.com/@pamelascottmusic" class="button btn-hvr-sweep-effects">Watch all Videos</a>
-                    </div>
-                </div>button-wrap -->
-            </div><!--text-content-->
-        </div><!--video-wrap-->
-    </div><!--billboard-content-->
-</section><!--billboard-->
+			<div class="billboard-content">
+				<div class="video-wrap">
+					<video class="bg-video" src="images/REST.mp4" autoplay muted loop playsinline></video>
+					<div class="video-overlay"></div>
+				</div><!--video-wrap-->
+			</div><!--billboard-content-->
+		</section><!--billboard-->
 
 	</div><!--header-wrap-->
 
 
-<!-- ================= MINI ABOUT ================= -->
+	<!-- ================= MINI ABOUT ================= -->
 	<section class="mini-about" data-aos="fade-up">
 		<div class="about-wrap">
 			<h2>Pamela Scott Music is rooted in the love of God and the love for people.</h2>
@@ -333,13 +321,12 @@
 		<div class="container" data-aos="fade-up">
 			<div class="row">
 				<div class="video-player">
-					<iframe src="https://www.youtube.com/embed/nJ9XsiaIpAY/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					<iframe src="https://www.youtube.com/embed/vcEHEzud0as?si=p-goATuWoIlZSLuV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 			</div>			
 			
-			<div class="btn-large text-center" style="text-align: center; display: flex; justify-content: center;">
+			<div class="btn-large text-center">
 				<a href="https://www.youtube.com/@pamelascottmusic" class="btn-common"><span>Watch all videos</span></a>
 			</div>
-			
 			<div class="secondary-title">
 				<h3>VIDEOS</h3>
 			</div><!--setion-title-->
@@ -352,7 +339,7 @@
 		<div class="newsletter-wrap">
 			<h2>Stay Up To Date</h2>
 			<p>Stay up to date with Pamela Scott Music &mdash; receive new music updates and exclusives from Pamela Scott.</p>
-			<a href="#" class="btn-common"><span>Sign Me Up</span></a>
+			<a href="/signup.html" class="btn-common"><span>Sign Me Up</span></a>
 		</div>
 	</section>
 
