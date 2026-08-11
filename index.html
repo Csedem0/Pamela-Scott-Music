@@ -202,6 +202,15 @@
 			#billboard .video-wrap { height: 30vh; }
 			.mini-about h2 { font-size: 1.5em; }
 			.listen-grid .listen-card { flex: 1 1 100%; }
+			.listen-section .section-header .section-title { font-size: 1.8em; }
+			#tour-concert .section-title { font-size: 1.8em; }
+			.newsletter-section h2 { font-size: 1.6em; }
+		}
+		
+		@media only screen and (max-width: 479px) {
+			.listen-section .section-header .section-title { font-size: 1.5em; }
+			#tour-concert .section-title { font-size: 1.5em; }
+			.newsletter-section h2 { font-size: 1.4em; }
 		}
 	</style>
 </head>
@@ -295,7 +304,7 @@
 	<section class="listen-section" data-aos="fade-up">
 		<div class="section-header text-center">
 			<h2 class="section-title text-uppercase">Listen to Pamela Scott</h2>
-			<h4>Four songs to start with</h4>
+			<!-- <h4>Four songs to start with</h4> -->
 		</div>
 		<div class="listen-grid">
 			<a href="https://pamelascott.fanlink.tv/rest" class="listen-card" target="_blank" rel="noopener">
@@ -325,14 +334,20 @@
 	<section id="tour-concert" class="tour-concert" data-aos="fade-up">
 		<div class="container">
 			<div class="section-header text-center">
-				<h2 class="section-title">Music</h2>
-				<h4>Get your early discount on tickets</h4>
+				<h2 class="section-title">Tour & Concerts</h2>
+				<!-- <h4>Get your early discount on tickets</h4> -->
 			</div>
 			<div class="special-events-grid">
 				<div class="events-meta" style="text-align: center;">
-					<span class="events-date">19 SEP 2026</span>
+					
+					<div class="listen-grid">
+						<a href="/ticket.html" class="listen-card" target="_blank" rel="noopener">
+							<div class="listen-thumb" style="background-image: url('images/tour.jpeg');"></div>
+							<div class="listen-title">Rest &mdash; 2025</div>
+						</a>
+					</div>
 					<div class="meta-location">
-						<strong>PAMELA SCOTT LIVE</strong>
+						<strong>19 SEPT 2026</strong>
 						<em>LIVE, PH, NIGERIA</em>
 					</div><!--meta-location-->
 					<div class="btn-small">
