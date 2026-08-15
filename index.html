@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Pamela Scott Music</title>
-		<meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <meta name="format-detection" content="telephone=no">
-	    <meta name="apple-mobile-web-app-capable" content="yes">
-	    <meta name="author" content="">
-	    <meta name="keywords" content="">
-	    <meta name="description" content="">
-		<meta charset="utf-8">
-		<!-- <meta http-equiv="refresh" content="0; url=https://pamelascottmusic.com/index.html"> -->
-		<link rel="canonical" href="https://pamelascottmusic.com/html">
-		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
-	    <link rel="stylesheet" type="text/css" href="style.css">
-	    <link rel="stylesheet" type="text/css" href="fonts/icomoon/icomoon.css">
-	    <link rel="stylesheet" type="text/css" href="aos/aos.css">
-	    <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
-		<link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
-		<link href="images/main-logo.png" rel="icon" sizes="32x32" type="image/png">
-		<style>
-		/* ---- Video billboard support (classes used in markup but not in base stylesheet) ---- */
-		/* #billboard { padding: 0; }
+    <title>Pamela Scott Music</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="refresh" content="0; url=https://pamelascottmusic.com/index.html"> -->
+    <link rel="canonical" href="https://pamelascottmusic.com/html">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="fonts/icomoon/icomoon.css">
+    <link rel="stylesheet" type="text/css" href="aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css" />
+    <link href="images/main-logo.png" rel="icon" sizes="32x32" type="image/png">
+    <style>
+        /* ---- Video billboard support (classes used in markup but not in base stylesheet) ---- */
+        /* #billboard { padding: 0; }
 		#billboard .video-wrap {
 			position: relative;
 			width: 100%;
@@ -48,212 +49,752 @@
 			z-index: 1;
 		} */
 
-		/* ---- Mini About section (Hillsong-style statement pattern) ---- */
-		.mini-about {
-			background: #fff;
-			padding: 6em 0;
-			text-align: center;
-		}
-		.mini-about .about-wrap {
-			max-width: 880px;
-			margin: 0 auto;
-			padding: 0 20px;
-		}
-		.mini-about h2 {
-			font-family: Oswald, sans-serif;
-			font-weight: 600;
-			font-size: 1.9em;
-			line-height: 1.35;
-			color: #776c6e;
-			text-transform: none;
-			margin-bottom: 35px;
-			letter-spacing: 0;
-		}
-		.mini-about p {
-			font-size: 1.15em;
-			line-height: 1.9;
-			color: #555;
-			margin-bottom: 0;
-		}
+        /* ---- Mini About section (Hillsong-style statement pattern) ---- */
+        .mini-about {
+            background: #fff;
+            padding: 6em 0;
+            text-align: center;
+        }
 
-		/* ---- Listen to Pamela Scott (feature grid) ---- */
-		.listen-section {
-			background: #111;
-			padding: 5em 0;
-		}
-		.listen-section .section-header h2 {
-			color: #fff;
-		}
-		.listen-section .section-header h4 {
-			color: #a7a7a7;
-		}
-		.listen-grid {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			gap: 25px;
-			max-width: 1000px;
-			margin: 45px auto 0;
-			padding: 0 15px;
-		}
-		.listen-grid .listen-card {
-			flex: 0 1 440px;
-			text-decoration: none;
-		}
-		.listen-grid .listen-thumb {
-			width: 100%;
-			height: 260px;
-			border-radius: 4px;
-			position: relative;
-			overflow: hidden;
-			background-color: #1a1818;
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: center;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-		.listen-grid .listen-thumb::before {
-			content: "";
-			position: absolute;
-			top: 0; left: 0; right: 0; bottom: 0;
-			background: rgba(17,17,17,0.25);
-			transition: background 0.3s ease;
-		}
-		.listen-grid .listen-card:hover .listen-thumb::before {
-			background: rgba(17,17,17,0.45);
-		}
-		.listen-grid .play-badge {
-			position: relative;
-			z-index: 2;
-		}
-		.listen-grid .play-badge {
-			width: 58px;
-			height: 58px;
-			border-radius: 50%;
-			background: rgba(255,255,255,0.15);
-			border: 2px solid rgba(255,255,255,0.7);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			transition: all 0.3s ease;
-		}
-		.listen-grid .play-badge::after {
-			content: "";
-			border-style: solid;
-			border-width: 10px 0 10px 16px;
-			border-color: transparent transparent transparent #fff;
-			margin-left: 4px;
-		}
-		.listen-grid .listen-card:hover .play-badge {
-			background: #776c6e;
-			border-color: #776c6e;
-		}
-		.listen-grid .listen-title {
-			text-align: center;
-			font-family: Oswald, sans-serif;
-			font-size: 1.15em;
-			color: #fff;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			margin-top: 18px;
-		}
+        .mini-about .about-wrap {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .mini-about h2 {
+            font-family: Oswald, sans-serif;
+            font-weight: 600;
+            font-size: 1.9em;
+            line-height: 1.35;
+            color: #776c6e;
+            text-transform: none;
+            margin-bottom: 35px;
+            letter-spacing: 0;
+        }
+
+        .mini-about p {
+            font-size: 1.15em;
+            line-height: 1.9;
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        /* ---- LISTEN SECTION CORE ---- */
+        .listen-section {
+            background: #0f0f0f;
+            padding: 5rem 0 4rem;
+            margin: 0;
+            width: 100%;
+        }
+
+        .listen-section .section-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .listen-section .section-title {
+            color: #ffffff;
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        /* ----- SECTION WITH VIDEO BACKGROUND ----- */
+        .listen-section {
+            position: relative;
+            /* make it a positioning context */
+            overflow: hidden;
+            /* crop video edges if needed */
+            /* Add your own padding, min-height, background color (fallback) */
+            padding: 5rem 0;
+            background: #111;
+            /* fallback while video loads */
+        }
+
+        /* The video itself — covers the entire section */
+        .listen-section .bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+            /* ensures the video fills the box */
+            z-index: 0;
+        }
+
+        /* Optional dark overlay for better text readability */
+        .listen-section .video-overlay {
+            position: absolute;
+            inset: 0;
+            /* top/right/bottom/left = 0 */
+            background: rgba(0, 0, 0, 0.45);
+            /* adjust opacity/color */
+            z-index: 1;
+        }
+
+        /* The content sits above the overlay and video */
+        .listen-section .content {
+            position: relative;
+            z-index: 2;
+            /* Add your own text styling, max-width, etc. */
+            color: #fff;
+            text-align: center;
+        }
+
+        /* ---- LISTEN GRID (No external gaps, max width) ---- */
+        .listen-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* ---- LISTEN CARD ---- */
+        .listen-card {
+            flex: 0 1 250px;
+            text-decoration: none;
+            transition: transform 0.25s ease;
+            display: block;
+        }
+
+        .listen-card:hover {
+            transform: translateY(-8px);
+        }
+
+        /* ---- LISTEN THUMB (Clean fit) ---- */
+        .listen-thumb {
+            width: 100%;
+            height: 220px;
+            border-radius: 8px;
+            background-color: #1a1a1a;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .listen-thumb::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.3);
+            transition: background 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .listen-card:hover .listen-thumb::before {
+            background: rgba(0, 0, 0, 0.45);
+        }
+
+        /* ---- PLAY BADGE (centered, crisp) ---- */
+        .play-badge {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .play-badge::after {
+            content: "";
+            border-style: solid;
+            border-width: 10px 0 10px 16px;
+            border-color: transparent transparent transparent #ffffff;
+            margin-left: 4px;
+            display: block;
+        }
+
+        .listen-card:hover .play-badge {
+            background: #c9a227;
+            border-color: #c9a227;
+            transform: scale(1.05);
+        }
+
+        /* ---- LISTEN TITLE ---- */
+        .listen-title {
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.15rem;
+            color: #f0f0f0;
+            margin-top: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        /* ---- BUTTON WRAP ---- */
+        .btn-large {
+            text-align: center;
+            margin-top: 45px;
+        }
+
+        .btn-common {
+            display: inline-block;
+            background: transparent;
+            border: 2px solid #c9a227;
+            color: #ffffff;
+            padding: 12px 38px;
+            font-weight: 600;
+            font-size: 0.95rem !important;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 40px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-common:hover {
+            background: #c9a227;
+            color: #0f0f0f;
+            border-color: #c9a227;
+        }
+
+        /* ---- RESPONSIVE FINE-TUNING ---- */
+        @media (max-width: 767px) {
+            .listen-section {
+                padding: 3.5rem 0;
+            }
+
+            .listen-section .section-title {
+                font-size: 2rem;
+            }
+
+            .listen-card {
+                flex: 1 1 100%;
+                max-width: 380px;
+            }
+
+            .listen-thumb {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .listen-section .section-title {
+                font-size: 1.8rem;
+            }
+
+            .listen-grid {
+                gap: 20px;
+                padding: 0 10px;
+            }
+        }
 
 
-		/* ---- Newsletter signup CTA ---- */
-		.newsletter-section {
-			background: #d1d0ce;
-			padding: 5em 0;
-			text-align: center;
-		}
-		.newsletter-section .newsletter-wrap {
-			max-width: 700px;
-			margin: 0 auto;
-			padding: 0 20px;
-		}
-		.newsletter-section h2 {
-			font-size: 2.2em;
-			color: #111;
-			margin-bottom: 18px;
-		}
-		.newsletter-section p {
-			font-size: 1.05em;
-			color: #444;
-			margin-bottom: 30px;
-			line-height: 1.7;
-		}
-		.newsletter-section a.btn-common {
-			font-size: 1.2em;
-			padding: 0.6em 2.6em;
-			border-radius: 2em;
-			color: #776c6e;
-			border: 3px solid #776c6e;
-			display: inline-block;
-			text-transform: uppercase;
-		}
-		.newsletter-section a.btn-common:hover {
-			color: #d1d0ce;
-			border-color: #111;
-			background: #111;
-		}
+        #tour-concert {
+            background: #f4f2ef;
+            padding: 5rem 0 4.5rem;
+            margin: 0;
+            width: 100%;
+        }
 
-		@media only screen and (max-width: 767px) {
-			#billboard .video-wrap { height: 30vh; }
-			.mini-about h2 { font-size: 1.5em; }
-			.listen-grid .listen-card { flex: 1 1 100%; }
-			.listen-section .section-header .section-title { font-size: 1.8em; }
-			#tour-concert .section-title { font-size: 1.8em; }
-			.newsletter-section h2 { font-size: 1.6em; }
-		}
-		
-		@media only screen and (max-width: 479px) {
-			.listen-section .section-header .section-title { font-size: 1.5em; }
-			#tour-concert .section-title { font-size: 1.5em; }
-			.newsletter-section h2 { font-size: 1.4em; }
-		}
-	</style>
+        #tour-concert .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        #tour-concert .section-header {
+            margin-bottom: 3rem;
+        }
+
+        #tour-concert .section-title {
+            color: #1e1e1e;
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        /* ---- TOUR FLEX LAYOUT (Image Left | Details Middle | Button Right) ---- */
+        .tour-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 35px;
+            background: #ffffff;
+            padding: 25px 35px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            max-width: 850px;
+            margin: 0 auto;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .tour-flex:hover {
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+        }
+
+        /* ---- TOUR IMAGE (Larger, appealing) ---- */
+        .tour-image-wrapper {
+            flex-shrink: 0;
+            width: 180px;
+            height: 180px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .tour-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .tour-flex:hover .tour-image {
+            transform: scale(1.05);
+        }
+
+        /* ---- TOUR DETAILS (Middle) ---- */
+        .tour-details {
+            flex: 1;
+            text-align: left;
+            min-width: 180px;
+        }
+
+        .tour-date {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1e1e1e;
+            letter-spacing: 1px;
+            display: block;
+            line-height: 1.2;
+        }
+
+        .tour-location {
+            font-style: normal;
+            color: #c9a227;
+            font-size: 1rem;
+            letter-spacing: 3px;
+            font-weight: 600;
+            text-transform: uppercase;
+            display: block;
+            margin-top: 8px;
+        }
+
+        .tour-venue {
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ---- REGISTER BUTTON (Right) ---- */
+        .btn-register {
+            flex-shrink: 0;
+            background: #1e1e1e;
+            color: #ffffff;
+            padding: .75rem 1.5rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 2px solid #1e1e1e;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .btn-register:hover {
+            background: #c9a227;
+            color: #1e1e1e;
+            border-color: #c9a227;
+            box-shadow: 0 5px 20px rgba(201, 162, 39, 0.4);
+        }
+
+        /* ---- RESPONSIVE BREAKPOINTS ---- */
+        @media (max-width: 768px) {
+            #tour-concert {
+                padding: 3.5rem 0;
+            }
+
+            #tour-concert .section-title {
+                font-size: 2rem;
+            }
+
+            .tour-flex {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 25px;
+                gap: 25px;
+            }
+
+            .tour-image-wrapper {
+                width: 150px;
+                height: 150px;
+                margin: 0 auto;
+            }
+
+            .tour-details {
+                text-align: center;
+            }
+
+            .tour-date {
+                font-size: 1.8rem;
+            }
+
+            .btn-register {
+                width: 100%;
+                text-align: center;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #tour-concert .section-title {
+                font-size: 1.7rem;
+            }
+
+            .tour-image-wrapper {
+                width: 130px;
+                height: 130px;
+            }
+
+            .tour-date {
+                font-size: 1.5rem;
+            }
+
+            .tour-location {
+                font-size: 0.85rem;
+                letter-spacing: 2px;
+            }
+        }
+
+
+        /* ---- VIDEOS SECTION CORE ---- */
+        .latest-videos {
+            position: relative;
+            background: url('images/video-bg.jpg') center/cover no-repeat fixed;
+            padding: 5rem 0 5rem;
+            margin: 0;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .latest-videos::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 10, 10, 0.82);
+            z-index: 1;
+        }
+
+        .latest-videos .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ---- SECTION HEADER ---- */
+        .latest-videos .section-header {
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .latest-videos .section-title {
+            color: #ffffff;
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .latest-videos .section-header h4 {
+            color: #c9a227;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            margin-top: 10px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        /* ---- VIDEO GRID (Responsive) ---- */
+        .video-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .video-card {
+            flex: 0 1 280px;
+            background: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .video-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+        }
+
+        .video-card iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            display: block;
+        }
+
+        /* ---- VIDEO ACTIONS (Right aligned, smaller button) ---- */
+        .video-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 35px;
+            padding: 0 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .watch-btn {
+            display: inline-block;
+            background: #c9a227;
+            color: #111;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 2px solid #c9a227;
+            transition: all 0.3s ease;
+        }
+
+        .watch-btn:hover {
+            background: transparent;
+            color: #c9a227;
+            border-color: #c9a227;
+            box-shadow: 0 5px 20px rgba(201, 162, 39, 0.4);
+        }
+
+        /* ---- DECORATIVE TITLE ---- */
+        .secondary-title {
+            text-align: right;
+            color: rgba(255, 255, 255, 0.15);
+            margin-top: -35px;
+            padding-right: 20px;
+            position: relative;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .secondary-title h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 5px;
+            margin: 0;
+        }
+
+        /* ---- RESPONSIVE BREAKPOINTS ---- */
+        @media (max-width: 768px) {
+            .latest-videos {
+                padding: 3.5rem 0;
+                background-attachment: scroll;
+            }
+
+            .latest-videos .section-title {
+                font-size: 2rem;
+            }
+
+            .video-card {
+                flex: 0 1 100%;
+                max-width: 450px;
+            }
+
+            .video-card iframe {
+                height: 220px;
+            }
+
+            .video-actions {
+                justify-content: center;
+            }
+
+            .secondary-title h3 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .latest-videos .section-title {
+                font-size: 1.7rem;
+            }
+
+            .video-card iframe {
+                height: 180px;
+            }
+
+            .watch-btn {
+                padding: 8px 22px;
+                font-size: 0.8rem;
+            }
+
+            .secondary-title h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+
+        /* ---- Newsletter signup CTA ---- */
+        .newsletter-section {
+            background: #d1d0ce;
+            padding: 5em 0;
+            text-align: center;
+        }
+
+        .newsletter-section .newsletter-wrap {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .newsletter-section h2 {
+            font-size: 2.2em;
+            color: #111;
+            margin-bottom: 18px;
+        }
+
+        .newsletter-section p {
+            font-size: 1.05em;
+            color: #444;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        .newsletter-section a.btn-common {
+            font-size: 1.2em;
+            padding: 0.6em 2.6em;
+            border-radius: 2em;
+            color: #776c6e;
+            border: 3px solid #776c6e;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        .newsletter-section a.btn-common:hover {
+            color: #d1d0ce;
+            border-color: #111;
+            background: #111;
+        }
+
+        @media only screen and (max-width: 767px) {
+            #billboard .video-wrap {
+                height: 30vh;
+            }
+
+            .mini-about h2 {
+                font-size: 1.5em;
+            }
+
+            .listen-grid .listen-card {
+                flex: 1 1 100%;
+            }
+
+            .listen-section .section-header .section-title {
+                font-size: 1.8em;
+            }
+
+            #tour-concert .section-title {
+                font-size: 1.8em;
+            }
+
+            .newsletter-section h2 {
+                font-size: 1.6em;
+            }
+        }
+
+        @media only screen and (max-width: 479px) {
+            .listen-section .section-header .section-title {
+                font-size: 1.5em;
+            }
+
+            #tour-concert .section-title {
+                font-size: 1.5em;
+            }
+
+            .newsletter-section h2 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<div id="body-wrapper">
+    <div id="body-wrapper">
 
 
-	<div id="header-wrap">
-		
-		<header class="header">
-			<div class="container-md">
-				<nav class="navbar navbar-expand-lg">
-					<div class="nav-brand">
-						<a href="index.html">
-							<img style="width: 70px;" src="images/main-logo.png" alt="logo">
-						</a>
-					</div>
+        <div id="header-wrap">
 
-					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#slide-navbar-collapse" aria-controls="slide-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-						<a href="javascript:void(0)" onclick="openNav()"><i class="icon icon-navicon"></i></a>
-					</button>
-					<div class="navbar-collapse collapse" id="slide-navbar-collapse">
-					<ul class="navbar-nav">
-						<li class="nav-item active"><a href="/index.html" class="navlink">Home</a></li>
-						<li class="nav-item"><a href="/about.html">About</a></li>
-						<li class="nav-item"><a href="/music.html">Music</a></li>
-						<li class="nav-item"><a href="/index.html#video">Videos</a></li>
-						<li class="nav-item"><a href="/index.html#tour-concert">Tour & Concerts</a></li>
-						<li class="nav-item"><a href="/ticket.html">Get Ticket</a></li>
-					</ul>
-						
-					</div><!--navbar-collapse-->
-				</nav>
-			</div>
-		</header>
+            <header class="header">
+                <div class="container-md">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="nav-brand">
+                            <a href="index.html">
+                                <img style="width: 70px;" src="images/main-logo.png" alt="logo">
+                            </a>
+                        </div>
 
-		<section id="billboard">
-    <div class="billboard-content">
-        <div class="video-wrap">
-            <video class="bg-video" src="images/REST.mp4" autoplay muted loop playsinline ></video>
-            <div class="video-overlay"></div>
+                        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                            data-target="#slide-navbar-collapse" aria-controls="slide-navbar-collapse"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <a href="javascript:void(0)" onclick="openNav()"><i class="icon icon-navicon"></i></a>
+                        </button>
+                        <div class="navbar-collapse collapse" id="slide-navbar-collapse">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active"><a href="/index.html" class="navlink">Home</a></li>
+                                <li class="nav-item"><a href="/about.html">About</a></li>
+                                <li class="nav-item"><a href="/music.html">Music</a></li>
+                                <li class="nav-item"><a href="/index.html#video">Videos</a></li>
+                                <li class="nav-item"><a href="/index.html#tour-concert">Tour & Concerts</a></li>
+                                <li class="nav-item"><a href="/ticket.html">Get Ticket</a></li>
+                            </ul>
 
-            <!-- <div class="text-content">
+                        </div><!--navbar-collapse-->
+                    </nav>
+                </div>
+            </header>
+
+            <section id="billboard">
+                <div class="billboard-content">
+                    <div class="video-wrap">
+                        <video class="bg-video" src="images/REST.mp4" autoplay muted loop playsinline></video>
+                        <div class="video-overlay"></div>
+
+                        <!-- <div class="text-content">
                 <h2 class="section-title">Gospel Praise</h2>
                 <p>Celebrate God's goodness with vibrant praise and inspiring gospel music that fills every heart with joy.</p>
                 <div class="button-wrap">
@@ -262,24 +803,25 @@
                         <a href="https://www.youtube.com/@pamelascottmusic" class="button btn-hvr-sweep-effects">Watch all Videos</a>
                     </div>
                 </div>button-wrap -->
-            </div><!--text-content-->
-        </div><!--video-wrap-->
-    </div><!--billboard-content-->
-</section><!--billboard-->
+                    </div><!--text-content-->
+                </div><!--video-wrap-->
+        </div><!--billboard-content-->
+        </section><!--billboard-->
 
-	</div><!--header-wrap-->
+    </div><!--header-wrap-->
 
 
-<!-- ================= MINI ABOUT ================= -->
-	<section class="mini-about" data-aos="fade-up">
-		<div class="about-wrap">
-			<h2>Pamela Scott Music is rooted in the love of God and the love for people.</h2>
-			<p>I believe music is a gift &mdash; a tool to reach hearts, stir minds, and connect us to something deeper. With spirit-filled lyrics, powerful vocals and melodies that carry His presence, my mission is simple: to spread the love of God and hope, because when His love finds you, life becomes beautiful and worth living.</p>
-		</div>
-		<div style="margin-top: 25px;">
-    <a href="/about.html" 
-       class="about-btn"
-       style="
+    <!-- ================= MINI ABOUT ================= -->
+    <section class="mini-about" data-aos="fade-up">
+        <div class="about-wrap">
+            <h2>Pamela Scott Music is rooted in the love of God and the love for people.</h2>
+            <p>I believe music is a gift &mdash; a tool to reach hearts, stir minds, and connect us to something deeper.
+                With spirit-filled lyrics, powerful vocals and melodies that carry His presence, my mission is simple:
+                to spread the love of God and hope, because when His love finds you, life becomes beautiful and worth
+                living.</p>
+        </div>
+        <div style="margin-top: 25px;">
+            <a href="/about.html" class="about-btn" style="
            display: inline-block;
            padding: 14px 30px;
            background: transparent;
@@ -294,160 +836,225 @@
            transition: all 0.3s ease;
            box-shadow: 0 5px 15px rgba(201, 162, 39, 0.25);
        ">
-        Read More About Me
-    </a>
-</div>
-	</section>
+                Read More About Me
+            </a>
+        </div>
+    </section>
 
 
-	<!-- ================= LISTEN TO PAMELA SCOTT ================= -->
-	<section class="listen-section" data-aos="fade-up">
-		<div class="section-header text-center">
-			<h2 class="section-title text-uppercase">Listen to Pamela Scott</h2>
-			<!-- <h4>Four songs to start with</h4> -->
-		</div>
-		<div class="listen-grid">
-			<a href="https://pamelascott.fanlink.tv/rest" class="listen-card" target="_blank" rel="noopener">
-				<div class="listen-thumb" style="background-image: url('images/IMG_1.PNG');"><div class="play-badge"></div></div>
-				<div class="listen-title">Rest &mdash; 2025</div>
-			</a>
-			<a href="https://fanlink.to/gSJa" class="listen-card" target="_blank" rel="noopener">
-				<div class="listen-thumb" style="background-image: url('images/IMG_2.JPEG');"><div class="play-badge"></div></div>
-				<div class="listen-title">Soldier &mdash; 2021</div>
-			</a>
-			<a href="https://pamelascottmusic.fanlink.tv/whoiam" class="listen-card" target="_blank" rel="noopener">
-				<div class="listen-thumb" style="background-image: url('images/IMG_3.JPG.jpeg');"><div class="play-badge"></div></div>
-				<div class="listen-title">Love Equals Jesus &mdash; 2018</div>
-			</a>
-			<a href="https://pamelascottmusic.fanlink.tv/flamesoflove" class="listen-card" target="_blank" rel="noopener">
-				<div class="listen-thumb" style="background-image: url('images/IMG_4.JPG.jpeg');"><div class="play-badge"></div></div>
-				<div class="listen-title">Flames Of Love &mdash; 2017</div>
-			</a>
-		</div>
-		<div class="btn-large text-center" style="margin: 40px;">
-			<a href="/music.html" class="btn-common"><span>See Full Discography</span></a>
-		</div>
-	</section>
+    <!-- ================= LISTEN SECTION MARKUP ================= -->
+    <section class="listen-section" data-aos="fade-up">
+        <!-- Background video -->
+        <video class="bg-video" src="images/IMG_5491.MP4" autoplay muted loop playsinline></video>
+        <!-- Optional overlay -->
+        <div class="video-overlay"></div>
+
+        <div class="content">
+
+            <div class="section-header text-center">
+                <h2 class="section-title">Listen to Pamela Scott</h2>
+            </div>
+            <div class="listen-grid">
+                <a href="https://pamelascott.fanlink.tv/rest" class="listen-card" target="_blank" rel="noopener">
+                    <div class="listen-thumb" style="background-image: url('images/IMG_1.PNG');">
+                        <div class="play-badge"></div>
+                    </div>
+                    <div class="listen-title">Rest — 2025</div>
+                </a>
+                <a href="https://fanlink.to/gSJa" class="listen-card" target="_blank" rel="noopener">
+                    <div class="listen-thumb" style="background-image: url('images/IMG_2.JPEG');">
+                        <div class="play-badge"></div>
+                    </div>
+                    <div class="listen-title">Soldier — 2021</div>
+                </a>
+                <a href="https://pamelascottmusic.fanlink.tv/whoiam" class="listen-card" target="_blank" rel="noopener">
+                    <div class="listen-thumb" style="background-image: url('images/IMG_6193.JPG.jpeg');">
+                        <div class="play-badge"></div>
+                    </div>
+                    <div class="listen-title">Love Equals Jesus — 2018</div>
+                </a>
+                <a href="https://pamelascottmusic.fanlink.tv/flamesoflove" class="listen-card" target="_blank"
+                    rel="noopener">
+                    <div class="listen-thumb" style="background-image: url('images/IMG_4.JPG.jpeg');">
+                        <div class="play-badge"></div>
+                    </div>
+                    <div class="listen-title">Flames Of Love — 2017</div>
+                </a>
+            </div>
+            <div class="btn-large">
+                <a href="/music.html" class="btn-common">See Full Discography</a>
+            </div>
+        </div>
+
+    </section>
 
 
-	<!-- ================= CONCERTS & EVENTS ================= -->
-	<section id="tour-concert" class="tour-concert" data-aos="fade-up">
-		<div class="container">
-			<div class="section-header text-center">
-				<h2 class="section-title">Tour & Concerts</h2>
-				<!-- <h4>Get your early discount on tickets</h4> -->
-			</div>
-			<div class="special-events-grid">
-				<div class="events-meta" style="text-align: center;">
-					
-					<div class="listen-grid">
-						<a href="/ticket.html" class="listen-card" target="_blank" rel="noopener">
-							<div class="listen-thumb" style="background-image: url('images/tour.jpeg');"></div>
-							<div class="listen-title">Rest &mdash; 2025</div>
-						</a>
-					</div>
-					<div class="meta-location">
-						<strong>19 SEPT 2026</strong>
-						<em>LIVE, PH, NIGERIA</em>
-					</div><!--meta-location-->
-					<div class="btn-small">
-						<a href="/ticket.html" class="button btn-hvr-sweep-effects">register</a>
-					</div>
-				</div><!--events-meta-->
-				</div><!--music-events-->
-			<!-- <div class="secondary-title">
-				<h4>MUSIC</h4>
-			</div>setion-tile -->
-		</div>
-	</section>
+    <!-- ================= TOUR & CONCERTS MARKUP ================= -->
+    <section id="tour-concert" class="tour-concert" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Tour & Concerts</h2>
+            </div>
 
-	<section id="video" class="latest-videos">		
-		<div class="section-header text-center">
-			<h2 class="section-title text-uppercase">Videos</h2>
-			<h4>latest music video and vlogs here</h4>
-		</div>
-		<div class="container" data-aos="fade-up">
-			<div class="row">
-				<div class="video-player">
-					<iframe src="https://www.youtube.com/embed/DnEkkGuQRSk/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-					<iframe src="https://www.youtube.com/embed/Sd4pihxGUv8/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-					<iframe src="https://www.youtube.com/embed/zvgbYwYdEak/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-					<iframe src="https://www.youtube.com/embed/6W2gumcbhCY/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-			</div>			
-			
-			<div class="btn-large text-center" style="text-align: center; display: flex; justify-content: center;">
-				<a href="https://www.youtube.com/@pamelascottmusic" class="btn-common"><span>Watch all videos</span></a>
-			</div>
-			
-			<div class="secondary-title">
-				<h3>VIDEOS</h3>
-			</div><!--setion-title-->
-		</div>
-	</section>
+            <div class="tour-flex">
+                <!-- Image Left -->
+                <div class="tour-image-wrapper">
+                    <img src="images/tour.jpeg" alt="Pamela Scott live concert" class="tour-image">
+                </div>
 
+                <!-- Details Middle -->
+                <div class="tour-details">
+                    <span class="tour-date">19 SEPT 2026</span>
+                    <span class="tour-location">LIVE, PH, NIGERIA</span>
+                </div>
 
-	<!-- ================= NEWSLETTER SIGNUP ================= -->
-	<section class="newsletter-section" data-aos="fade-up">
-		<div class="newsletter-wrap">
-			<h2>Stay Up To Date</h2>
-			<p>Stay up to date with Pamela Scott Music &mdash; receive new music updates and exclusives from Pamela Scott.</p>
-			<a href="#" class="btn-common"><span>Sign Me Up</span></a>
-		</div>
-	</section>
+                <!-- Register Button Right -->
+                <a href="/ticket.html" class="btn-register">Register</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= VIDEOS SECTION MARKUP ================= -->
+    <section id="video" class="latest-videos">
+        <div class="section-header text-center">
+            <h2 class="section-title text-uppercase">Videos</h2>
+            <h4>Latest Music Videos & Vlogs</h4>
+        </div>
+
+        <div class="container" data-aos="fade-up">
+            <div class="video-grid">
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/DnEkkGuQRSk/" title="Pamela Scott - Rest"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/Sd4pihxGUv8/" title="Pamela Scott - Soldier"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/zvgbYwYdEak/" title="Pamela Scott - Love Equals Jesus"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/6W2gumcbhCY/" title="Pamela Scott - Flames of Love"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="video-actions">
+                <a href="https://www.youtube.com/@pamelascottmusic" class="watch-btn" target="_blank"
+                    rel="noopener">Watch All Videos</a>
+            </div>
+        </div>
+    </section>
 
 
-	<footer id="footer" data-aos="fade-up">
-		<div class="container">
-			<div class="row">
-				<div class="wpb_column align-center">
-					<div class="social-links">
-						<ul>
-							<li class="mr-3"><a href="https://www.facebook.com/iampamelascott"><i class="icon icon-facebook"></i></a></li>
-							<li class="mr-3"><a href="https://www.instagram.com/pamelascottmusic"><i class="icon icon-instagram"></i></a></li>
-							<li class="mr-3"><a href="https://youtube.com/pamelascottmusic"><i class="icon icon-youtube"></i></a></li>
-						</ul>
-					</div><!--social-links-->
-					<div class="widget_nav_menu">
-						<ul class="footer-menu">
-							<li class="menu-item">
-								<a href="index.html">Home</a>
-							</li>
-							<li class="menu-item">
-								<a href="about.html">About</a>
-							</li>
-							<li class="menu-item">
-								<a href="music.html">Music</a>
-							</li>
-							<li class="menu-item">
-								<a href="#tour-concert">Tour & Concerts</a>
-							</li>
-						</ul>
-					</div><!--widget_nav_menu-->
-					<div class="copyright">
-						<p>Copyright &copy; 2026 Pamela Scott Music. All Rights Reserved.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+    <!-- ================= NEWSLETTER SIGNUP ================= -->
+    <section class="newsletter-section" data-aos="fade-up">
+        <div class="newsletter-wrap">
+            <h2>Stay Up To Date</h2>
+            <p>Stay up to date with Pamela Scott Music &mdash; receive new music updates and exclusives from Pamela
+                Scott.</p>
+            <a href="#" class="btn-common"><span>Sign Me Up</span></a>
+        </div>
+    </section>
 
-</div> 
 
-	<script src="js/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="aos/aos.js"></script>		
-	<script type="text/javascript" src="slick/slick/slick.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
-	<script>
-	$(document).ready(function () {
-	// Close the mobile nav overlay the instant a link is tapped,
-	// so it never has to be "reachable" after the page scrolls.
-	$('.navbar-nav .nav-item a').on('click', function () {
-		$('#slide-navbar-collapse').collapse('hide');
-		$('.navbar-toggler').addClass('collapsed').attr('aria-expanded', 'false');
-	});
-	});
-	</script>
+    <footer id="footer" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="wpb_column align-center">
+
+                    <!-- Booking Information -->
+                    <div class="booking-info">
+                        <h4>Bookings</h4>
+                        <p>
+                            For bookings, contact
+                            <a href="tel:+2349066187996">+2349066187996</a>
+                            or
+                            <a href="mailto:pamelascottofficial@gmail.com">pamelascottofficial@gmail.com</a>.
+                        </p>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <ul>
+                            <li class="mr-3">
+                                <a href="https://www.facebook.com/iampamelascott">
+                                    <i class="icon icon-facebook"></i>
+                                </a>
+                            </li>
+
+                            <li class="mr-3">
+                                <a href="https://www.instagram.com/pamelascottmusic">
+                                    <i class="icon icon-instagram"></i>
+                                </a>
+                            </li>
+
+                            <li class="mr-3">
+                                <a href="https://youtube.com/pamelascottmusic">
+                                    <i class="icon icon-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Footer Navigation -->
+                    <div class="widget_nav_menu">
+                        <ul class="footer-menu">
+                            <li class="menu-item">
+                                <a href="index.html">Home</a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="about.html">About</a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="music.html">Music</a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="#tour-concert">Tour &amp; Concerts</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Copyright -->
+                    <div class="copyright">
+                        <p>
+                            Copyright &copy; 2026 Pamela Scott Music.
+                            All Rights Reserved.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="aos/aos.js"></script>
+    <script type="text/javascript" src="slick/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Close the mobile nav overlay the instant a link is tapped,
+            // so it never has to be "reachable" after the page scrolls.
+            $('.navbar-nav .nav-item a').on('click', function () {
+                $('#slide-navbar-collapse').collapse('hide');
+                $('.navbar-toggler').addClass('collapsed').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
 
 </body>
+
 </html>

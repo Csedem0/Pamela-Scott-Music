@@ -1,412 +1,806 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Get Your Free Ticket - Pamela Scott Music</title>
-		<meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <meta name="format-detection" content="telephone=no">
-	    <meta name="apple-mobile-web-app-capable" content="yes">
-	    <meta name="author" content="">
-	    <meta name="keywords" content="">
-	    <meta name="description" content="Reserve your free ticket. Limited capacity, registration required.">
-		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
-	    <link rel="stylesheet" type="text/css" href="style.css">
-	    <link rel="stylesheet" type="text/css" href="fonts/icomoon/icomoon.css">
-	    <link rel="stylesheet" type="text/css" href="aos/aos.css">
-	    <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
-		<link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
-		<link href="images/main-logo.png" rel="icon" sizes="32x32" type="image/png">
+    <title>Get Your Free Ticket - Pamela Scott Music</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="Reserve your free ticket. Limited capacity, registration required.">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="fonts/icomoon/icomoon.css">
+    <link rel="stylesheet" type="text/css" href="aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css" />
+    <link href="images/main-logo.png" rel="icon" sizes="32x32" type="image/png">
 
-	<style>
-		/* ---- Ticket page specific styles (kept consistent with theme variables) ---- */
+    <style>
+        /* ---- Ticket page specific styles ---- */
 
-		#ticket-hero {
-			position: relative;
-			width: 100%;
-			min-height: 420px;
-			background: url(/images/headerbg.JPG) no-repeat center center;
-			background-size: cover;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			text-align: center;
-			padding: 6em 20px;
-		}
-		#ticket-hero::before {
-			content: "";
-			position: absolute;
-			top: 0; left: 0; right: 0; bottom: 0;
-			background: rgba(17,17,17,0.55);
-		}
-		#ticket-hero .hero-inner {
-			position: relative;
-			z-index: 2;
-			max-width: 700px;
-			margin: 0 auto;
-		}
-		#ticket-hero .hero-inner span.eyebrow {
-			display: inline-block;
-			color: #d1d0ce;
-			letter-spacing: 3px;
-			font-size: 0.85em;
-			text-transform: uppercase;
-			margin-bottom: 15px;
-		}
-		#ticket-hero .hero-inner h1 {
-			font-size: 3em;
-			color: #fff;
-			margin-bottom: 15px;
-		}
-		#ticket-hero .hero-inner p.sub {
-			color: #d1d0ce;
-			font-size: 1.1em;
-			margin-bottom: 30px;
-			letter-spacing: 0.5px;
-		}
-		#ticket-hero .btn-common {
-			font-size: 1.3em;
-			padding: 0.6em 2.5em;
-			border-radius: 2em;
-			color: #fff;
-			border: 3px solid #fff;
-			display: inline-block;
-			text-transform: uppercase;
-		}
-		#ticket-hero .btn-common:hover {
-			color: #111;
-			background: #fff;
-		}
+        /* Hero with video background */
+        #ticket-hero {
+            position: relative;
+            width: 100%;
+            min-height: 420px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6em 20px;
+        }
 
-		/* Why register strip */
-		.why-register {
-			background: #d1d0ce;
-			padding: 4em 0;
-		}
-		.why-register .why-grid {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			text-align: center;
-		}
-		.why-register .why-item {
-			width: 22%;
-			min-width: 180px;
-			margin: 15px 20px;
-		}
-		.why-register .why-item i {
-			font-size: 2em;
-			color: #776c6e;
-			display: block;
-			margin-bottom: 12px;
-		}
-		.why-register .why-item strong {
-			display: block;
-			text-transform: uppercase;
-			font-family: Oswald, sans-serif;
-			letter-spacing: 1px;
-			color: #111;
-			margin-bottom: 6px;
-		}
-		.why-register .why-item span {
-			font-size: 0.9em;
-			color: #444;
-		}
+        #ticket-hero .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
 
-		/* Event details */
-		.event-details {
-			padding: 5em 0;
-			background: #fff;
-		}
-		.event-details .details-grid {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			max-width: 900px;
-			margin: 40px auto 0;
-		}
-		.event-details .detail-box {
-			width: 45%;
-			min-width: 240px;
-			margin: 15px 2.5%;
-			padding: 25px;
-			border: 1px solid #e2e2e2;
-			text-align: center;
-		}
-		.event-details .detail-box label {
-			display: block;
-			font-size: 12px;
-			letter-spacing: 2px;
-			color: #a7a7a7;
-			text-transform: uppercase;
-			margin-bottom: 8px;
-		}
-		.event-details .detail-box strong {
-			display: block;
-			font-family: Oswald, sans-serif;
-			font-size: 1.2em;
-			color: #111;
-			text-transform: uppercase;
-		}
+        #ticket-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(17, 17, 17, 0.55);
+            z-index: 1;
+        }
 
-		/* Registration form section */
-		.registration-section {
-			background: #111;
-			padding: 5em 0;
-		}
-		.registration-section .section-title,
-		.registration-section h4 {
-			color: #fff;
-		}
-		.registration-section .form-wrap {
-			max-width: 640px;
-			margin: 40px auto 0;
-			background: #1c1c1c;
-			padding: 40px;
-			border: 1px solid #333;
-		}
-		.registration-section .form-wrap iframe {
-			width: 100%;
-			min-height: 600px;
-			border: 0;
-		}
-		.registration-section .fallback-note {
-			color: #a7a7a7;
-			text-align: center;
-			font-size: 0.85em;
-			margin-top: 20px;
-		}
+        #ticket-hero .hero-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+        }
 
-		/* FAQ */
-		.ticket-faq {
-			padding: 5em 0;
-			background: #f7f7f6;
-		}
-		.ticket-faq .faq-list {
-			max-width: 800px;
-			margin: 40px auto 0;
-		}
-		.ticket-faq .faq-item {
-			border-bottom: 1px solid #ddd;
-			padding: 20px 0;
-		}
-		.ticket-faq .faq-item h5 {
-			text-transform: none;
-			font-family: Oswald, sans-serif;
-			font-size: 1.1em;
-			color: #111;
-			margin-bottom: 8px;
-			letter-spacing: 0;
-		}
-		.ticket-faq .faq-item p {
-			color: #555;
-			margin: 0;
-		}
+        #ticket-hero .hero-inner span.eyebrow {
+            display: inline-block;
+            color: #d1d0ce;
+            letter-spacing: 3px;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
 
-		@media only screen and (max-width: 767px) {
-			#ticket-hero .hero-inner h1 { font-size: 2.2em; }
-			.why-register .why-item { width: 100%; }
-			.event-details .detail-box { width: 100%; margin: 10px 0; }
-			.registration-section .form-wrap { padding: 25px; }
-		}
-	</style>
+        #ticket-hero .hero-inner h1 {
+            font-size: 3em;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        #ticket-hero .hero-inner p.sub {
+            color: #d1d0ce;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
+        }
+
+        #ticket-hero .btn-common {
+            font-size: 1.3em;
+            padding: 0.5rem 2rem;
+            margin-top: 1rem;
+            border-radius: 2em;
+            color: #fff;
+            border: 3px solid #fff;
+            display: inline-block;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        #ticket-hero .btn-common:hover {
+            color: #111;
+            background: #fff;
+            text-decoration: none;
+        }
+
+        /* Flyer + Write-up section (like About page bio) */
+        .flyer-section {
+            padding: 5em 0;
+            background: #fff;
+        }
+
+        .flyer-section .flyer-wrap {
+            display: flex;
+            align-items: stretch;
+            gap: 60px;
+        }
+
+        .flyer-section .flyer-image {
+            flex: 0 0 40%;
+            max-width: 40%;
+            position: relative;
+        }
+
+        .flyer-section .flyer-image .image-frame {
+            width: 100%;
+            height: 100%;
+            min-height: 380px;
+            background: url(/images/flyer.JPG) no-repeat center center;
+            background-size: cover;
+            position: relative;
+            border-radius: 4px;
+        }
+
+        .flyer-section .flyer-image .image-frame::after {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: -20px;
+            bottom: -20px;
+            border: 3px solid #776c6e;
+            z-index: -1;
+            border-radius: 4px;
+        }
+
+        .flyer-section .flyer-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .flyer-section .flyer-text h2.section-title {
+            font-size: 2.4em;
+            margin-bottom: 18px;
+        }
+
+        .flyer-section .flyer-text .event-name {
+            font-family: Oswald, sans-serif;
+            font-size: 1.6em;
+            color: #776c6e;
+            margin-bottom: 10px;
+        }
+
+        .flyer-section .flyer-text p {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 16px;
+        }
+
+        .flyer-section .flyer-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .flyer-section .flyer-text .flyer-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px 35px;
+            margin-top: 10px;
+            padding-top: 16px;
+            border-top: 1px solid #e6e6e6;
+        }
+
+        .flyer-section .flyer-text .flyer-meta span {
+            font-size: 0.9em;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .flyer-section .flyer-text .flyer-meta span i {
+            font-size: 1.2em;
+            color: #776c6e;
+        }
+
+        .flyer-section .flyer-text .flyer-meta strong {
+            color: #111;
+            font-family: Oswald, sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        /* Why register strip */
+        .why-register {
+            padding: 4em 0;
+        }
+
+        .why-register .why-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .why-register .why-item {
+            width: 22%;
+            min-width: 180px;
+            margin: 15px 20px;
+        }
+
+        .why-register .why-item i {
+            font-size: 2em;
+            color: #776c6e;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .why-register .why-item strong {
+            display: block;
+            text-transform: uppercase;
+            font-family: Oswald, sans-serif;
+            letter-spacing: 1px;
+            color: #111;
+            margin-bottom: 6px;
+        }
+
+        .why-register .why-item span {
+            font-size: 0.9em;
+            color: #444;
+        }
+
+        /* Event details — compact with small font */
+        .event-details {
+            padding: 3em 0;
+            background: #d1d0ce;
+        }
+
+        .event-details .section-header h4 {
+            font-weight: 300;
+            color: #777;
+            letter-spacing: 1px;
+            margin-top: 4px;
+            font-size: 1.1em;
+        }
+
+        .event-details .details-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 900px;
+            margin: 25px auto 0;
+            gap: 15px;
+        }
+
+        .event-details .detail-box {
+            flex: 1 1 200px;
+            min-width: 180px;
+            padding: 16px 18px;
+            border: 1px solid #e2e2e2;
+            text-align: center;
+            background: #fafafa;
+            transition: box-shadow 0.2s;
+        }
+
+        .event-details .detail-box:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .event-details .detail-box label {
+            display: block;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #a7a7a7;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .event-details .detail-box strong {
+            display: block;
+            font-family: Oswald, sans-serif;
+            font-size: 0.95em;
+            color: #111;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            line-height: 1.4;
+        }
+
+        .event-details .detail-box strong.location-text {
+            font-size: 0.8em;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        /* Registration form section */
+        .registration-section {
+            background: #111;
+            padding: 5em 0;
+        }
+
+        .registration-section .section-title,
+        .registration-section h4 {
+            color: #fff;
+        }
+
+        .registration-section h4 {
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        .registration-section .form-wrap {
+            max-width: 640px;
+            margin: 30px auto 0;
+            background: #1c1c1c;
+            padding: 40px;
+            border: 1px solid #333;
+        }
+
+        .registration-section .form-wrap iframe {
+            width: 100%;
+            min-height: 600px;
+            border: 0;
+        }
+
+        .registration-section .fallback-note {
+            color: #a7a7a7;
+            text-align: center;
+            font-size: 0.85em;
+            margin-top: 20px;
+        }
+
+        /* FAQ — small font size like other sections */
+        .ticket-faq {
+            padding: 4em 0;
+            background: #f7f7f6;
+        }
+
+        .ticket-faq .faq-list {
+            max-width: 800px;
+            margin: 30px auto 0;
+        }
+
+        .ticket-faq .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 16px 0;
+        }
+
+        .ticket-faq .faq-item h5 {
+            text-transform: none;
+            font-family: Oswald, sans-serif;
+            font-size: 1em;
+            color: #111;
+            margin-bottom: 4px;
+            letter-spacing: 0;
+        }
+
+        .ticket-faq .faq-item p {
+            color: #555;
+            margin: 0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media only screen and (max-width: 991px) {
+            .flyer-section .flyer-wrap {
+                flex-wrap: wrap;
+                gap: 40px;
+            }
+
+            .flyer-section .flyer-image {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+
+            .flyer-section .flyer-image .image-frame {
+                min-height: 280px;
+                height: auto;
+                aspect-ratio: 4/3;
+            }
+
+            .flyer-section .flyer-image .image-frame::after {
+                top: 15px;
+                left: 15px;
+                right: -15px;
+                bottom: -15px;
+            }
+
+            .flyer-section .flyer-text {
+                flex: 1 1 100%;
+            }
+
+            .flyer-section .flyer-text h2.section-title {
+                font-size: 2em;
+            }
+
+            .flyer-section .flyer-text .event-name {
+                font-size: 1.3em;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            #ticket-hero {
+                min-height: 300px;
+                padding: 4em 20px;
+            }
+
+            #ticket-hero .hero-inner h1 {
+                font-size: 2em;
+            }
+
+            #ticket-hero .btn-common {
+                font-size: 1em;
+                padding: 0.5em 1.8em;
+            }
+
+            .flyer-section {
+                padding: 3em 0;
+            }
+
+            .flyer-section .flyer-image .image-frame {
+                min-height: 200px;
+            }
+
+            .flyer-section .flyer-image .image-frame::after {
+                top: 10px;
+                left: 10px;
+                right: -10px;
+                bottom: -10px;
+                border-width: 2px;
+            }
+
+            .flyer-section .flyer-text h2.section-title {
+                font-size: 1.6em;
+            }
+
+            .flyer-section .flyer-text p {
+                font-size: 0.95em;
+                line-height: 1.7;
+            }
+
+            .flyer-section .flyer-text .flyer-meta {
+                gap: 12px 20px;
+            }
+
+            .flyer-section .flyer-text .flyer-meta span {
+                font-size: 0.8em;
+            }
+
+            .why-register .why-item {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .event-details {
+                padding: 2em 0;
+            }
+
+            .event-details .detail-box {
+                flex: 1 1 100%;
+                min-width: unset;
+                padding: 12px 14px;
+            }
+
+            .event-details .detail-box strong {
+                font-size: 0.85em;
+            }
+
+            .event-details .detail-box strong.location-text {
+                font-size: 0.75em;
+            }
+
+            .registration-section .form-wrap {
+                padding: 20px;
+            }
+
+            .registration-section .form-wrap iframe {
+                min-height: 480px;
+            }
+
+            .ticket-faq {
+                padding: 3em 0;
+            }
+
+            .ticket-faq .faq-item {
+                padding: 12px 0;
+            }
+
+            .ticket-faq .faq-item h5 {
+                font-size: 0.9em;
+            }
+
+            .ticket-faq .faq-item p {
+                font-size: 0.85em;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            #ticket-hero .hero-inner h1 {
+                font-size: 1.6em;
+            }
+
+            .flyer-section .flyer-text .event-name {
+                font-size: 1.1em;
+            }
+
+            .flyer-section .flyer-text .flyer-meta {
+                flex-direction: column;
+                gap: 6px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<div id="body-wrapper">
+    <div id="body-wrapper">
+
+        <div id="header-wrap">
+            <header class="header">
+                <div class="container-md">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="nav-brand">
+                            <a href="index.html">
+                                <img style="width: 70px;" src="images/main-logo.png" alt="logo">
+                            </a>
+                        </div>
+
+                        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                            data-target="#slide-navbar-collapse" aria-controls="slide-navbar-collapse"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <a href="javascript:void(0)" onclick="openNav()"><i class="icon icon-navicon"></i></a>
+                        </button>
+                        <div class="navbar-collapse collapse" id="slide-navbar-collapse">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a href="/index.html" class="navlink">Home</a></li>
+                                <li class="nav-item"><a href="/about.html">About</a></li>
+                                <li class="nav-item"><a href="/music.html">Music</a></li>
+                                <li class="nav-item"><a href="/index.html#video">Videos</a></li>
+                                <li class="nav-item"><a href="/index.html#tour-concert">Tour & Concerts</a></li>
+                                <li class="nav-item active"><a href="/ticket.html">Get Ticket</a></li>
+                            </ul>
+                        </div>
+                        <!--navbar-collapse-->
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <!--header-wrap-->
+
+        <!-- ================= HERO with Video Background ================= -->
+        <section id="ticket-hero">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="images/IMG_5481.MP4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-inner" data-aos="fade-up">
+                <h1>Reserve Your Free Ticket</h1>
+                <a href="#register" class="btn-common"><span>Register</span></a>
+            </div>
+        </section>
+
+        <!-- ================= FLYER + WRITE-UP (updated text, icons instead of emojis) ================= -->
+        <section class="flyer-section" data-aos="fade-up">
+            <div class="container">
+                <div class="flyer-wrap">
+                    <div class="flyer-image">
+                        <div class="image-frame">
+                            <img src="images/IMG_5437.PNG" alt="">
+                        </div>
+                    </div>
+                    <div class="flyer-text">
+                        <span class="event-name">Pamela Scott Live</span>
+                        <h2 class="section-title">A Monthly Show</h2>
+                        <p>Pamela Scott Live is a monthly show hosted by Pamela Scott.</p>
+                        <p>It’s a community for rock and alternative music lovers who want more.</p>
+                        <p>Built on the theme of God’s love, this event opens the door to God-kind possibilities — where
+                            music meets faith, and heart meets wholeness.</p>
+                        <div class="flyer-meta">
+                            <span><i class="icon icon-calendar"></i> <strong>Date:</strong> 19th September, 2026</span>
+                            <span><i class="icon icon-clock"></i> <strong>Time:</strong> 1:00PM – 4:00PM</span>
+                            <span><i class="icon icon-location"></i> <strong>Venue:</strong> Lord Reginalds, The
+                                Autograph, New GRA PH</span>
+                            <span><i class="icon icon-ticket"></i> <strong>Entry:</strong> Free (Registration
+                                Required)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= EVENT DETAILS (compact, small font) ================= -->
+        <section class="event-details" data-aos="fade-up">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Event Details</h2>
+                    <h4>Everything you need to know before the show</h4>
+                </div>
+                <div class="details-grid">
+                    <div class="detail-box">
+                        <label>Date</label>
+                        <strong>19th Sep, 2026</strong>
+                    </div>
+                    <div class="detail-box">
+                        <label>Time</label>
+                        <strong>1:00PM – 4:00PM</strong>
+                    </div>
+                    <div class="detail-box">
+                        <label>Location</label>
+                        <strong class="location-text">Lord Reginalds, The Autograph, Sani Abacha Road, New GRA PH,
+                            Rivers</strong>
+                    </div>
+                    <div class="detail-box">
+                        <label>Contact</label>
+                        <strong>+234 906 618 7996</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
-	<div id="header-wrap">
+        <!-- ================= WHY REGISTER ================= -->
+        <section class="why-register" data-aos="fade-up">
+            <div class="container">
+                <div class="section-header text-center" style="padding: 0 0 20px;">
+                    <h2 class="section-title" style="font-size: 2.2em;">Why Register?</h2>
+                </div>
+                <div class="why-grid">
+                    <div class="why-item">
+                        <i class="icon icon-ticket"></i>
+                        <strong>Free Entry</strong>
+                        <span>No cost, just register to save your spot</span>
+                    </div>
+                    <div class="why-item">
+                        <i class="icon icon-bell"></i>
+                        <strong>Event Reminders</strong>
+                        <span>WhatsApp & email updates before showtime</span>
+                    </div>
+                    <div class="why-item">
+                        <i class="icon icon-users"></i>
+                        <strong>Limited Seats</strong>
+                        <span>First come, first serve capacity</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-		<header class="header">
-			<div class="container-md">
-				<nav class="navbar navbar-expand-lg">
-					<div class="nav-brand">
-						<a href="index.html">
-							<img style="width: 70px;" src="images/main-logo.png" alt="logo">
-						</a>
-					</div>
+        <!-- ================= REGISTRATION FORM ================= -->
+        <section id="register" class="registration-section" data-aos="fade-up">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Reserve Your Spot</h2>
+                    <h4>Fill the form below — for reservations</h4>
+                </div>
+                <div class="form-wrap">
+                    <!--
+                        Replace the src below with your live Tally form embed URL.
+                        Tally gives you an embed link like: https://tally.so/embed/XXXXXX
+                    -->
+                    <iframe data-tally-src="https://tally.so/embed/NpxbXW?hideTitle=1&dynamicHeight=1" loading="lazy"
+                        width="100%" height="1126" frameborder="0" marginheight="0" marginwidth="0"
+                        title="Reserve Your Free Spot"></iframe>
+                    <script>
+                        var d = document,
+                            w = "https://tally.so/widgets/embed.js",
+                            v = function () { "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function (e) { e.src = e.dataset.tallySrc })) };
+                        if ("undefined" != typeof Tally) v();
+                        else if (d.querySelector('script[src="' + w + '"]') == null) {
+                            var s = d.createElement("script");
+                            s.src = w, s.onload = v, s.onerror = v, d.body.appendChild(s);
+                        }
+                    </script>
+                </div>
+                <p class="fallback-note">Having trouble with the form? Reach us directly on WhatsApp at +234 906 618
+                    7996.</p>
+            </div>
+        </section>
 
-					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#slide-navbar-collapse" aria-controls="slide-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-						<a href="javascript:void(0)" onclick="openNav()"><i class="icon icon-navicon"></i></a>
-					</button>
-					<div class="navbar-collapse collapse" id="slide-navbar-collapse">
-					<ul class="navbar-nav">
-						<li class="nav-item active"><a href="/index.html" class="navlink">Home</a></li>
-						<li class="nav-item"><a href="/about.html">About</a></li>
-						<li class="nav-item"><a href="/music.html">Music</a></li>
-						<li class="nav-item"><a href="/index.html#video">Videos</a></li>
-						<li class="nav-item"><a href="/index.html#tour-concert">Tour & Concerts</a></li>
-						<li class="nav-item"><a href="/ticket.html">Get Ticket</a></li>
-					</ul>
-						
-					</div><!--navbar-collapse-->
-				</nav>
-			</div>
-		</header>
+        <!-- ================= FAQ (small font) ================= -->
+        <section class="ticket-faq" data-aos="fade-up">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h5>Is this event really free?</h5>
+                        <p>Yes, entry is completely free. Registration is required because seating is limited.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5>What happens if I register but can't attend?</h5>
+                        <p>Please let us know via WhatsApp so we can free up your spot for someone on the waitlist.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5>Is my spot guaranteed?</h5>
+                        <p>Spots are held until 2:00PM on the day of the show. After that, unclaimed seats are released
+                            to walk-ins.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	</div><!--header-wrap-->
+        <footer id="footer" data-aos="fade-up">
+            <div class="container">
+                <div class="row">
+                    <div class="wpb_column align-center">
 
+                        <!-- Booking Information -->
+                        <div class="booking-info">
+                            <h4>Bookings</h4>
+                            <p>
+                                For bookings, contact
+                                <a href="tel:+2349066187996">+2349066187996</a>
+                                or
+                                <a href="mailto:pamelascottofficial@gmail.com">pamelascottofficial@gmail.com</a>.
+                            </p>
+                        </div>
 
-	<!-- ================= HERO ================= -->
-	<section id="ticket-hero">
-		<div class="hero-inner" data-aos="fade-up">
-			<h1>Reserve Your Free Ticket</h1>
-			<a href="#register" class="btn-common"><span>Register</span></a>
-		</div>
-	</section>
+                        <!-- Social Links -->
+                        <div class="social-links">
+                            <ul>
+                                <li class="mr-3">
+                                    <a href="https://www.facebook.com/iampamelascott">
+                                        <i class="icon icon-facebook"></i>
+                                    </a>
+                                </li>
 
+                                <li class="mr-3">
+                                    <a href="https://www.instagram.com/pamelascottmusic">
+                                        <i class="icon icon-instagram"></i>
+                                    </a>
+                                </li>
 
-	<!-- ================= WHY REGISTER ================= -->
-	<section class="why-register" data-aos="fade-up">
-		<div class="container">
-			<div class="section-header text-center" style="padding: 0 0 20px;">
-				<h2 class="section-title" style="font-size: 2.2em;">Why Register?</h2>
-			</div>
-			<div class="why-grid">
-				<div class="why-item">
-					<i class="icon icon-ticket"></i>
-					<strong>Free Entry</strong>
-					<span>No cost, just register to save your spot</span>
-				</div>
-				<div class="why-item">
-					<i class="icon icon-bell"></i>
-					<strong>Event Reminders</strong>
-					<span>WhatsApp & email updates before showtime</span>
-				</div>
-				<div class="why-item">
-					<i class="icon icon-users"></i>
-					<strong>Limited Seats</strong>
-					<span>First come, first serve capacity</span>
-				</div>
-			</div>
-		</div>
-	</section>
+                                <li class="mr-3">
+                                    <a href="https://youtube.com/pamelascottmusic">
+                                        <i class="icon icon-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
 
+                        <!-- Footer Navigation -->
+                        <div class="widget_nav_menu">
+                            <ul class="footer-menu">
+                                <li class="menu-item">
+                                    <a href="index.html">Home</a>
+                                </li>
 
-	<!-- ================= EVENT DETAILS ================= -->
-	<section class="event-details" data-aos="fade-up">
-		<div class="container">
-			<div class="section-header text-center">
-				<h2 class="section-title">Event Details</h2>
-				<h4>Everything you need to know before the show</h4>
-			</div>
-			<div class="details-grid">
-				<div class="detail-box">
-					<label>Date</label>
-					<strong>19th Sep, 2026</strong>
-				</div>
-				<div class="detail-box">
-					<label>Time</label>
-					<strong>1:00PM - 4:00PM</strong>
-				</div>
-				<div class="detail-box">
-					<label>Location</label>
-					<strong>Lord Reginalds, The Autograph, Sani Abacha Road, New GRA PH, Rivers, Nigeria</strong>
-				</div>
-				<div class="detail-box">
-					<label>Contact</label>
-					<strong>+234 906 618 7996</strong>
-				</div>
-			</div>
-		</div>
-	</section>
+                                <li class="menu-item">
+                                    <a href="about.html">About</a>
+                                </li>
 
+                                <li class="menu-item">
+                                    <a href="music.html">Music</a>
+                                </li>
 
-	<!-- ================= REGISTRATION FORM ================= -->
-	<section id="register" class="registration-section" data-aos="fade-up">
-		<div class="container">
-			<div class="section-header text-center">
-				<h2 class="section-title">Reserve Your Spot</h2>
-				<h4>Fill the form below &mdash; for reservations</h4>
-			</div>
-			<div class="form-wrap">
-				<!--
-					Replace the src below with your live Tally form embed URL.
-					Tally gives you an embed link like: https://tally.so/embed/XXXXXX
-				-->
-				<iframe data-tally-src="https://tally.so/embed/NpxbXW?hideTitle=1&dynamicHeight=1" loading="lazy" width="100%" height="1126" frameborder="0" marginheight="0" marginwidth="0" title="Reserve Your Free Spot"></iframe>
-<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-			</div>
-			<p class="fallback-note">Having trouble with the form? Reach us directly on WhatsApp at [Insert Number].</p>
-		</div>
-	</section>
+                                <li class="menu-item">
+                                    <a href="#tour-concert">Tour &amp; Concerts</a>
+                                </li>
+                            </ul>
+                        </div>
 
+                        <!-- Copyright -->
+                        <div class="copyright">
+                            <p>
+                                Copyright &copy; 2026 Pamela Scott Music.
+                                All Rights Reserved.
+                            </p>
+                        </div>
 
-	<!-- ================= FAQ ================= -->
-	<section class="ticket-faq" data-aos="fade-up">
-		<div class="container">
-			<div class="section-header text-center">
-				<h2 class="section-title">Frequently Asked Questions</h2>
-			</div>
-			<div class="faq-list">
-				<div class="faq-item">
-					<h5>Is this event really free?</h5>
-					<p>Yes, entry is completely free. Registration is required because seating is limited.</p>
-				</div>
-				<div class="faq-item">
-					<h5>What happens if I register but can't attend?</h5>
-					<p>Please let us know via WhatsApp so we can free up your spot for someone on the waitlist.</p>
-				</div>
-				<div class="faq-item">
-					<h5>Is my spot guaranteed?</h5>
-					<p>Spots are held until 2:00PM on the day of the show. After that, unclaimed seats are released to walk-ins.</p>
-				</div>
-			</div>
-		</div>
-	</section>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
+    </div>
 
-	<footer id="footer" data-aos="fade-up">
-		<div class="container">
-			<div class="row">
-				<div class="wpb_column align-center">
-					<div class="social-links">
-						<ul>
-							<li class="mr-3"><a href="https://www.facebook.com/iampamelascott"><i class="icon icon-facebook"></i></a></li>
-							<li class="mr-3"><a href="https://www.instagram.com/pamelascottmusic"><i class="icon icon-instagram"></i></a></li>
-							<li class="mr-3"><a href="https://youtube.com/pamelascottmusic"><i class="icon icon-youtube"></i></a></li>
-						</ul>
-					</div><!--social-links-->
-					<div class="widget_nav_menu">
-						<ul class="footer-menu">
-							<li class="menu-item">
-								<a href="index.html">Home</a>
-							</li>
-							<li class="menu-item">
-								<a href="about.html">About</a>
-							</li>
-							<li class="menu-item">
-								<a href="music.html">Music</a>
-							</li>
-							<li class="menu-item">
-								<a href="#tour-concert">Tour & Concerts</a>
-							</li>
-						</ul>
-					</div><!--widget_nav_menu-->
-					<div class="copyright">
-						<p>Copyright &copy; 2026 Pamela Scott Music. All Rights Reserved.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-</div>
-
-	<script src="js/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="aos/aos.js"></script>
-	<script type="text/javascript" src="slick/slick/slick.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="aos/aos.js"></script>
+    <script type="text/javascript" src="slick/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
     <script>
-	$(document).ready(function () {
-	// Close the mobile nav overlay the instant a link is tapped,
-	// so it never has to be "reachable" after the page scrolls.
-	$('.navbar-nav .nav-item a').on('click', function () {
-		$('#slide-navbar-collapse').collapse('hide');
-		$('.navbar-toggler').addClass('collapsed').attr('aria-expanded', 'false');
-	});
-	});
-	</script>
+        $(document).ready(function () {
+            // Close the mobile nav overlay the instant a link is tapped
+            $('.navbar-nav .nav-item a').on('click', function () {
+                $('#slide-navbar-collapse').collapse('hide');
+                $('.navbar-toggler').addClass('collapsed').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
 </body>
+
 </html>

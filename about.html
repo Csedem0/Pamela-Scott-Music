@@ -1,470 +1,729 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>About - Pamela Scott Music</title>
-		<meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <meta name="format-detection" content="telephone=no">
-	    <meta name="apple-mobile-web-app-capable" content="yes">
-	    <meta name="author" content="">
-	    <meta name="keywords" content="">
-	    <meta name="description" content="Pamela Scott is a singer, songwriter and producer from Rivers State, Nigeria, known for her rock sound and powerful vocals.">
-		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
-	    <link rel="stylesheet" type="text/css" href="style.css">
-	    <link rel="stylesheet" type="text/css" href="fonts/icomoon/icomoon.css">
-	    <link rel="stylesheet" type="text/css" href="aos/aos.css">
-	    <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
-		<link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
+    <title>About - Pamela Scott Music</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description"
+        content="Pamela Scott is a singer, songwriter and producer from Rivers State, Nigeria, known for her rock sound and powerful vocals.">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="fonts/icomoon/icomoon.css">
+    <link rel="stylesheet" type="text/css" href="aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css" />
 
-	<style>
-		/* ---- About page specific styles ---- */
+    <style>
+        /* ---- About page specific styles ---- */
 
-		/* Hero */
-		#about-hero {
-			position: relative;
-			width: 100%;
-			min-height: 380px;
-			background: url(/images/banner1.JPG) no-repeat center center;
-			background-size: cover;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			text-align: center;
-			padding: 5em 20px;
-		}
-		#about-hero::before {
-			content: "";
-			position: absolute;
-			top: 0; left: 0; right: 0; bottom: 0;
-			background: rgba(17,17,17,0.55);
-		}
-		#about-hero .hero-inner {
-			position: relative;
-			z-index: 2;
-		}
-		#about-hero span.eyebrow {
-			display: inline-block;
-			color: #d1d0ce;
-			letter-spacing: 3px;
-			font-size: 0.85em;
-			text-transform: uppercase;
-			margin-bottom: 12px;
-		}
-		#about-hero h1 {
-			font-size: 3em;
-			color: #fff;
-			margin-bottom: 8px;
-		}
-		#about-hero p.location {
-			color: #d1d0ce;
-			letter-spacing: 1px;
-			text-transform: uppercase;
-			font-size: 0.9em;
-		}
+        /* Hero */
+        #about-hero {
+            position: relative;
+            width: 100%;
+            min-height: 400px;
+            background: url(/images/banner1.JPG) no-repeat top center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 5em 20px;
+        }
 
-		/* Bio section */
-		.bio-section {
-			padding: 5em 0;
-			background: #fff;
-		}
-		.bio-section .bio-wrap {
-			display: flex;
-			align-items: center;
-			gap: 60px;
-		}
-		.bio-section .bio-image {
-			flex: 0 0 40%;
-		}
-		.bio-section .bio-image .image-frame {
-			width: 100%;
-			height: 480px;
-			background: url(/images/item1.JPG) no-repeat center center;
-			background-size: cover;
-			position: relative;
-		}
-		.bio-section .bio-image .image-frame::after {
-			content: "";
-			position: absolute;
-			top: 20px;
-			left: 20px;
-			right: -20px;
-			bottom: -20px;
-			border: 3px solid #776c6e;
-			z-index: -1;
-		}
-		.bio-section .bio-text {
-			flex: 1;
-		}
-		.bio-section .bio-text h2.section-title {
-			font-size: 2.4em;
-			margin-bottom: 25px;
-		}
-		.bio-section .bio-text p {
-			font-size: 1.05em;
-			line-height: 1.8;
-			color: #333;
-		}
+        #about-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(17, 17, 17, 0.55);
+        }
 
-		/* Pull quote */
-		.pull-quote {
-			background: #776c6e;
-			padding: 4em 0;
-			text-align: center;
-		}
-		.pull-quote blockquote {
-			max-width: 800px;
-			margin: 0 auto;
-			color: #fff;
-			font-family: Oswald, sans-serif;
-			font-size: 2em;
-			font-weight: 200;
-			font-style: italic;
-			line-height: 1.4;
-		}
-		.pull-quote blockquote::before,
-		.pull-quote blockquote::after {
-			content: "\201C";
-			font-size: 1em;
-		}
-		.pull-quote blockquote::after {
-			content: "\201D";
-		}
-		.pull-quote cite {
-			display: block;
-			margin-top: 20px;
-			font-style: normal;
-			text-transform: uppercase;
-			letter-spacing: 2px;
-			font-size: 0.5em;
-			color: #f2ece3;
-		}
+        #about-hero .hero-inner {
+            position: relative;
+            z-index: 2;
+        }
 
-		/* Discography timeline */
-		.discog-timeline {
-			padding: 5em 0;
-			background: #f7f7f6;
-		}
-		.discog-timeline .timeline-list {
-			max-width: 780px;
-			margin: 40px auto 0;
-			position: relative;
-			padding-left: 30px;
-			border-left: 2px solid #ddd;
-		}
-		.discog-timeline .timeline-item {
-			position: relative;
-			padding-bottom: 35px;
-		}
-		.discog-timeline .timeline-item:last-child {
-			padding-bottom: 0;
-		}
-		.discog-timeline .timeline-item::before {
-			content: "";
-			position: absolute;
-			left: -37px;
-			top: 4px;
-			width: 12px;
-			height: 12px;
-			border-radius: 50%;
-			background: #776c6e;
-			border: 3px solid #f7f7f6;
-		}
-		.discog-timeline .timeline-item .t-year {
-			font-family: Oswald, sans-serif;
-			font-size: 1.6em;
-			color: #776c6e;
-			line-height: 1;
-			margin-bottom: 6px;
-		}
-		.discog-timeline .timeline-item strong {
-			display: block;
-			font-family: Oswald, sans-serif;
-			font-size: 1.2em;
-			color: #111;
-			text-transform: none;
-			margin-bottom: 4px;
-		}
-		.discog-timeline .timeline-item span.tag {
-			display: inline-block;
-			font-size: 11px;
-			letter-spacing: 1px;
-			text-transform: uppercase;
-			color: #fff;
-			background: #a7a7a7;
-			padding: 3px 10px;
-			border-radius: 12px;
-		}
-		.discog-timeline .timeline-item.is-ep span.tag {
-			background: #776c6e;
-		}
+        #about-hero span.eyebrow {
+            display: inline-block;
+            color: #d1d0ce;
+            letter-spacing: 3px;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
 
-		/* On stage */
-		.on-stage {
-			padding: 5em 0;
-			background: #fff;
-			text-align: center;
-		}
-		.on-stage .stage-grid {
-			display: flex;
-			justify-content: center;
-			gap: 25px;
-			margin-top: 40px;
-			flex-wrap: wrap;
-		}
-		.on-stage .stage-city {
-			flex: 0 0 200px;
-			padding: 40px 20px;
-			border: 1px solid #e6e6e6;
-		}
-		.on-stage .stage-city i {
-			font-size: 1.8em;
-			color: #776c6e;
-			display: block;
-			margin-bottom: 15px;
-		}
-		.on-stage .stage-city strong {
-			display: block;
-			font-family: Oswald, sans-serif;
-			font-size: 1.3em;
-			color: #111;
-			text-transform: uppercase;
-		}
-		.on-stage .stage-city span {
-			font-size: 0.85em;
-			color: #999;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-		}
+        #about-hero h1 {
+            font-size: 3em;
+            color: #fff;
+            margin-bottom: 8px;
+        }
 
-		@media only screen and (max-width: 899px) {
-			.bio-section .bio-wrap {
-				flex-wrap: wrap;
-			}
-			.bio-section .bio-image,
-			.bio-section .bio-text {
-				flex: 1 1 100%;
-			}
-			.bio-section .bio-image .image-frame {
-				height: 340px;
-				margin-bottom: 20px;
-			}
-			.pull-quote blockquote {
-				font-size: 1.4em;
-			}
-		}
-		@media only screen and (max-width: 599px) {
-			#about-hero h1 { font-size: 2.2em; }
-			.on-stage .stage-city { flex: 1 1 100%; }
-		}
-	</style>
+        #about-hero p.location {
+            color: #d1d0ce;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        /* Bio section */
+        .bio-section {
+            padding: 5em 0;
+            background: #fff;
+        }
+
+        .bio-section .bio-wrap {
+            display: flex;
+            align-items: stretch;
+            gap: 60px;
+        }
+
+        .bio-section .bio-image {
+            flex: 0 0 40%;
+            max-width: 40%;
+            position: relative;
+        }
+
+        .bio-section .bio-image .image-frame {
+            width: 100%;
+            height: 100%;
+            min-height: 420px;
+            background: url(/images/item1.JPG) no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .bio-section .bio-image .image-frame::after {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: -20px;
+            bottom: -20px;
+            border: 3px solid #776c6e;
+            z-index: -1;
+        }
+
+        .bio-section .bio-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .bio-section .bio-text h2.section-title {
+            font-size: 2.4em;
+            margin-bottom: 25px;
+        }
+
+        .bio-section .bio-text p {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 16px;
+        }
+
+        .bio-section .bio-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Pull quote */
+        .pull-quote {
+            background: #776c6e;
+            padding: 4em 0;
+            text-align: center;
+        }
+
+        .pull-quote blockquote {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #fff;
+            font-family: Oswald, sans-serif;
+            font-size: 2em;
+            font-weight: 200;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        .pull-quote blockquote::before,
+        .pull-quote blockquote::after {
+            content: "\201C";
+            font-size: 1em;
+        }
+
+        .pull-quote blockquote::after {
+            content: "\201D";
+        }
+
+        .pull-quote cite {
+            display: block;
+            margin-top: 20px;
+            font-style: normal;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.5em;
+            color: #f2ece3;
+        }
+
+        /* Discography timeline */
+        .discog-timeline {
+            padding: 5em 0;
+            background: #f7f7f6;
+        }
+
+        .discog-timeline .section-header h4 {
+            font-weight: 300;
+            color: #777;
+            letter-spacing: 1px;
+            margin-top: 6px;
+        }
+
+        .discog-timeline .timeline-list {
+            max-width: 780px;
+            margin: 40px auto 0;
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid #ddd;
+        }
+
+        .discog-timeline .timeline-item {
+            position: relative;
+            padding-bottom: 38px;
+            padding-left: 8px;
+        }
+
+        .discog-timeline .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .discog-timeline .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -37px;
+            top: 6px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #fff;
+            border: 3px solid #776c6e;
+            box-shadow: 0 0 0 3px #f7f7f6;
+        }
+
+        .discog-timeline .timeline-item .t-year {
+            font-family: Oswald, sans-serif;
+            font-size: 1.9em;
+            color: #776c6e;
+            line-height: 1.1;
+            margin-bottom: 2px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .discog-timeline .timeline-item strong {
+            display: block;
+            font-family: Oswald, sans-serif;
+            font-size: 1.35em;
+            color: #111;
+            text-transform: none;
+            margin-bottom: 6px;
+            letter-spacing: 0.3px;
+        }
+
+        .discog-timeline .timeline-item span.tag {
+            display: inline-block;
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #fff;
+            background: #a7a7a7;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-family: Oswald, sans-serif;
+        }
+
+        .discog-timeline .timeline-item.is-ep span.tag {
+            background: #776c6e;
+        }
+
+        /* On stage */
+        .on-stage {
+            padding: 5em 0;
+            background: #fff;
+            text-align: center;
+        }
+
+        .on-stage .stage-grid {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .on-stage .stage-city {
+            flex: 0 0 200px;
+            padding: 40px 20px;
+            border: 1px solid #e6e6e6;
+        }
+
+        .on-stage .stage-city i {
+            font-size: 1.8em;
+            color: #776c6e;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .on-stage .stage-city strong {
+            display: block;
+            font-family: Oswald, sans-serif;
+            font-size: 1.3em;
+            color: #111;
+            text-transform: uppercase;
+        }
+
+        .on-stage .stage-city span {
+            font-size: 0.85em;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ---- Responsive ---- */
+        @media only screen and (max-width: 991px) {
+            .bio-section .bio-wrap {
+                flex-wrap: wrap;
+                gap: 40px;
+            }
+
+            .bio-section .bio-image {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+
+            .bio-section .bio-image .image-frame {
+                min-height: 360px;
+                height: auto;
+                aspect-ratio: 4/3;
+            }
+
+            .bio-section .bio-image .image-frame::after {
+                top: 15px;
+                left: 15px;
+                right: -15px;
+                bottom: -15px;
+            }
+
+            .bio-section .bio-text {
+                flex: 1 1 100%;
+            }
+
+            .pull-quote blockquote {
+                font-size: 1.6em;
+            }
+
+            .discog-timeline .timeline-list {
+                padding-left: 24px;
+            }
+
+            .discog-timeline .timeline-item::before {
+                left: -31px;
+                width: 12px;
+                height: 12px;
+            }
+
+            .discog-timeline .timeline-item .t-year {
+                font-size: 1.6em;
+            }
+
+            .discog-timeline .timeline-item strong {
+                font-size: 1.2em;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            #about-hero {
+                min-height: 280px;
+                padding: 3em 20px;
+            }
+
+            #about-hero h1 {
+                font-size: 2.4em;
+            }
+
+            .bio-section {
+                padding: 3em 0;
+            }
+
+            .bio-section .bio-image .image-frame {
+                min-height: 260px;
+                aspect-ratio: 4/3;
+            }
+
+            .bio-section .bio-image .image-frame::after {
+                top: 12px;
+                left: 12px;
+                right: -12px;
+                bottom: -12px;
+            }
+
+            .bio-section .bio-text h2.section-title {
+                font-size: 2em;
+            }
+
+            .pull-quote {
+                padding: 3em 0;
+            }
+
+            .pull-quote blockquote {
+                font-size: 1.3em;
+            }
+
+            .discog-timeline {
+                padding: 3em 0;
+            }
+
+            .discog-timeline .timeline-list {
+                padding-left: 20px;
+                margin-top: 28px;
+            }
+
+            .discog-timeline .timeline-item {
+                padding-bottom: 30px;
+            }
+
+            .discog-timeline .timeline-item::before {
+                left: -26px;
+                width: 10px;
+                height: 10px;
+            }
+
+            .discog-timeline .timeline-item .t-year {
+                font-size: 1.4em;
+            }
+
+            .discog-timeline .timeline-item strong {
+                font-size: 1.1em;
+            }
+
+            .discog-timeline .timeline-item span.tag {
+                font-size: 9px;
+                padding: 3px 12px;
+            }
+        }
+
+        @media only screen and (max-width: 599px) {
+            #about-hero h1 {
+                font-size: 1.8em;
+            }
+
+            #about-hero p.location {
+                font-size: 0.75em;
+            }
+
+            .bio-section .bio-image .image-frame {
+                min-height: 200px;
+            }
+
+            .bio-section .bio-image .image-frame::after {
+                top: 10px;
+                left: 10px;
+                right: -10px;
+                bottom: -10px;
+                border-width: 2px;
+            }
+
+            .bio-section .bio-text h2.section-title {
+                font-size: 1.6em;
+                margin-bottom: 16px;
+            }
+
+            .bio-section .bio-text p {
+                font-size: 0.95em;
+                line-height: 1.7;
+            }
+
+            .pull-quote blockquote {
+                font-size: 1.1em;
+            }
+
+            .on-stage .stage-city {
+                flex: 1 1 100%;
+            }
+
+            .discog-timeline .timeline-item {
+                padding-bottom: 24px;
+            }
+
+            .discog-timeline .timeline-item .t-year {
+                font-size: 1.2em;
+            }
+
+            .discog-timeline .timeline-item strong {
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<div id="body-wrapper">
+    <div id="body-wrapper">
+
+        <div id="header-wrap">
+            <header class="header">
+                <div class="container-md">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="nav-brand">
+                            <a href="index.html">
+                                <img style="width: 70px;" src="images/main-logo.png" alt="logo">
+                            </a>
+                        </div>
+
+                        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                            data-target="#slide-navbar-collapse" aria-controls="slide-navbar-collapse"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <a href="javascript:void(0)" onclick="openNav()"><i class="icon icon-navicon"></i></a>
+                        </button>
+                        <div class="navbar-collapse collapse" id="slide-navbar-collapse">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a href="/index.html" class="navlink">Home</a></li>
+                                <li class="nav-item active"><a href="/about.html">About</a></li>
+                                <li class="nav-item"><a href="/music.html">Music</a></li>
+                                <li class="nav-item"><a href="/index.html#video">Videos</a></li>
+                                <li class="nav-item"><a href="/index.html#tour-concert">Tour & Concerts</a></li>
+                                <li class="nav-item"><a href="/ticket.html">Get Ticket</a></li>
+                            </ul>
+                        </div>
+                        <!--navbar-collapse-->
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <!--header-wrap-->
 
 
-	<div id="header-wrap">
-
-		<header class="header">
-			<div class="container-md">
-				<nav class="navbar navbar-expand-lg">
-					<div class="nav-brand">
-						<a href="index.html">
-							<img style="width: 70px;" src="images/main-logo.png" alt="logo">
-						</a>
-					</div>
-
-					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#slide-navbar-collapse" aria-controls="slide-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-						<a href="javascript:void(0)" onclick="openNav()"><i class="icon icon-navicon"></i></a>
-					</button>
-					<div class="navbar-collapse collapse" id="slide-navbar-collapse">
-					<ul class="navbar-nav">
-						<li class="nav-item active"><a href="/index.html" class="navlink">Home</a></li>
-						<li class="nav-item"><a href="/about.html">About</a></li>
-						<li class="nav-item"><a href="/music.html">Music</a></li>
-						<li class="nav-item"><a href="/index.html#video">Videos</a></li>
-						<li class="nav-item"><a href="/index.html#tour-concert">Tour & Concerts</a></li>
-						<li class="nav-item"><a href="/ticket.html">Get Ticket</a></li>
-					</ul>
-						
-					</div><!--navbar-collapse-->
-				</nav>
-			</div>
-		</header>
-
-	</div><!--header-wrap-->
+        <!-- ================= HERO ================= -->
+        <section id="about-hero">
+            <div class="hero-inner" data-aos="fade-up">
+                <h1>Pamela Scott</h1>
+                <p class="location">Singer &bull; Songwriter &bull; Producer</p>
+            </div>
+        </section>
 
 
-	<!-- ================= HERO ================= -->
-	<section id="about-hero">
-		<div class="hero-inner" data-aos="fade-up">
-			<h1>Pamela Scott</h1>
-			<p class="location">Singer &bull; Songwriter &bull; Producer</p>
-		</div>
-	</section>
+        <!-- ================= BIO ================= -->
+        <section class="bio-section" data-aos="fade-up">
+            <div class="container">
+                <div class="bio-wrap">
+                    <div class="bio-image">
+                        <div class="image-frame"></div>
+                    </div>
+                    <div class="bio-text">
+                        <h2 class="section-title">About</h2>
+                        <p>Pamela Scott is a singer, songwriter, and producer who is making waves in the music industry
+                            with her unique rock sound. Hailing from Rivers State, Nigeria, Pamela has carved out a
+                            niche for herself in the rock genre, showcasing her powerful vocals, guitar skills, and
+                            introspective lyrics.</p>
+                        <p>She has released an impressive EP titled <strong>Who I Am</strong> (2019), which gives a
+                            glimpse of her journey in finding her identity. In addition to her EP, Pamela has also
+                            released six singles &mdash; each one demonstrating the love of God and hope.</p>
+                        <p>She has also been featured on international stages in London, Liverpool, and Manchester.</p>
+                        <p>Pamela Scott is a member of Hillsong Liverpool Worship Team.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
-	<!-- ================= BIO ================= -->
-	<section class="bio-section" data-aos="fade-up">
-		<div class="container">
-			<div class="bio-wrap">
-				<div class="bio-image">
-					<div class="image-frame"></div>
-				</div>
-				<div class="bio-text">
-					<h2 class="section-title">About</h2>
-					<p>Pamela Scott is a singer, songwriter, and producer who is making waves in the music industry with her unique rock sound. Hailing from Rivers State, Nigeria, Pamela has carved out a niche for herself in the rock genre, showcasing her powerful vocals, guitar skills, and introspective lyrics.</p>
-					<p>She has released an impressive EP titled <strong>Who I Am</strong> (2019), which gives a glimpse of her journey in finding her identity. In addition to her EP, Pamela has also released six singles &mdash; each one demonstrating the love of God and hope.</p>
-					<p>She has also been featured on international stages in London, Liverpool, and Manchester.</p>
-					<p>Pamela Scott is a member of Hillsong Liverpool Worship Team.</p>
-				</div>
-			</div>
-		</div>
-	</section>
+        <!-- ================= PULL QUOTE ================= -->
+        <section class="pull-quote" data-aos="fade-up">
+            <div class="container">
+                <blockquote>I sing the truth because it sets one free</blockquote>
+                <cite>&mdash; Pamela Scott</cite>
+            </div>
+        </section>
 
 
-	<!-- ================= PULL QUOTE ================= -->
-	<section class="pull-quote" data-aos="fade-up">
-		<div class="container">
-			<blockquote>I sing the truth because it sets one free</blockquote>
-			<cite>&mdash; Pamela Scott</cite>
-		</div>
-	</section>
+        <!-- ================= DISCOGRAPHY TIMELINE ================= -->
+        <section class="discog-timeline" data-aos="fade-up">
+            <div class="container">
+                <div class="section-header text-center" style="padding: 0 0 10px;">
+                    <h2 class="section-title" style="font-size: 2.2em;">Discography</h2>
+                    <h4>A journey told through every release</h4>
+                </div>
+                <div class="timeline-list">
+                    <div class="timeline-item">
+                        <div class="t-year">2025</div>
+                        <strong>Rest</strong>
+                        <span class="tag">Single</span>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="t-year">2021</div>
+                        <strong>Soldier</strong>
+                        <span class="tag">Single</span>
+                    </div>
+                    <div class="timeline-item is-ep">
+                        <div class="t-year">2019</div>
+                        <strong>Who I Am</strong>
+                        <span class="tag">EP</span>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="t-year">2018</div>
+                        <strong>Love Equals Jesus</strong>
+                        <span class="tag">Single</span>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="t-year">2017</div>
+                        <strong>Flames Of Love</strong>
+                        <span class="tag">Single</span>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="t-year">2016</div>
+                        <strong>Teach Me</strong>
+                        <span class="tag">Single</span>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="t-year">2015</div>
+                        <strong>Habitation</strong>
+                        <span class="tag">Single</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
-	<!-- ================= DISCOGRAPHY TIMELINE ================= -->
-	<section class="discog-timeline" data-aos="fade-up">
-		<div class="container">
-			<div class="section-header text-center" style="padding: 0 0 10px;">
-				<h2 class="section-title" style="font-size: 2.2em;">Discography</h2>
-				<h4>A journey told through every release</h4>
-			</div>
-			<div class="timeline-list">
-				<div class="timeline-item">
-					<div class="t-year">2025</div>
-					<strong>Rest</strong>
-					<span class="tag">Single</span>
-				</div>
-				<div class="timeline-item">
-					<div class="t-year">2021</div>
-					<strong>Soldier</strong>
-					<span class="tag">Single</span>
-				</div>
-				<div class="timeline-item">
-					<div class="t-year">2019</div>
-					<strong>Who I Am</strong>
-					<span class="tag">EP</span>
-				</div>
-				<div class="timeline-item">
-					<div class="t-year">2018</div>
-					<strong>Love Equals Jesus</strong>
-					<span class="tag">Single</span>
-				</div>
-				<div class="timeline-item">
-					<div class="t-year">2017</div>
-					<strong>Flames Of Love</strong>
-					<span class="tag">Single</span>
-				</div>
-				<div class="timeline-item">
-					<div class="t-year">2016</div>
-					<strong>Teach Me</strong>
-					<span class="tag">Single</span>
-				</div>
-				<div class="timeline-item">
-					<div class="t-year">2015</div>
-					<strong>Habitation</strong>
-					<span class="tag">Single</span>
-				</div>
-			</div>
-		</div>
-	</section>
+        <!-- ================= ON STAGE ================= -->
+        <!--
+        <section class="on-stage" data-aos="fade-up">
+            <div class="container">
+                <div class="section-header text-center" style="padding: 0 0 10px;">
+                    <h2 class="section-title" style="font-size: 2.2em;">On International Stages</h2>
+                    <h4>Bringing the sound beyond home</h4>
+                </div>
+                <div class="stage-grid">
+                    <div class="stage-city">
+                        <i class="icon icon-location"></i>
+                        <strong>London</strong>
+                        <span>United Kingdom</span>
+                    </div>
+                    <div class="stage-city">
+                        <i class="icon icon-location"></i>
+                        <strong>Liverpool</strong>
+                        <span>United Kingdom</span>
+                    </div>
+                    <div class="stage-city">
+                        <i class="icon icon-location"></i>
+                        <strong>Manchester</strong>
+                        <span>United Kingdom</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
 
 
-	<!-- ================= ON STAGE ================= -->
-	<!--<section class="on-stage" data-aos="fade-up">
-		<div class="container">
-			<div class="section-header text-center" style="padding: 0 0 10px;">
-				<h2 class="section-title" style="font-size: 2.2em;">On International Stages</h2>
-				<h4>Bringing the sound beyond home</h4>
-			</div>
-			<div class="stage-grid">
-				<div class="stage-city">
-					<i class="icon icon-location"></i>
-					<strong>London</strong>
-					<span>United Kingdom</span>
-				</div>
-				<div class="stage-city">
-					<i class="icon icon-location"></i>
-					<strong>Liverpool</strong>
-					<span>United Kingdom</span>
-				</div>
-				<div class="stage-city">
-					<i class="icon icon-location"></i>
-					<strong>Manchester</strong>
-					<span>United Kingdom</span>
-				</div>
-			</div>
-		</div>
-	</section>-->
+        <footer id="footer" data-aos="fade-up">
+            <div class="container">
+                <div class="row">
+                    <div class="wpb_column align-center">
 
+                        <!-- Booking Information -->
+                        <div class="booking-info">
+                            <h4>Bookings</h4>
+                            <p>
+                                For bookings, contact
+                                <a href="tel:+2349066187996">+2349066187996</a>
+                                or
+                                <a href="mailto:pamelascottofficial@gmail.com">pamelascottofficial@gmail.com</a>.
+                            </p>
+                        </div>
 
-	<footer id="footer" data-aos="fade-up">
-		<div class="container">
-			<div class="row">
-				<div class="wpb_column align-center">
-					<div class="social-links">
-						<ul>
-							<li class="mr-3"><a href="https://www.facebook.com/iampamelascott"><i class="icon icon-facebook"></i></a></li>
-							<li class="mr-3"><a href="https://www.instagram.com/pamelascottmusic"><i class="icon icon-instagram"></i></a></li>
-							<li class="mr-3"><a href="https://youtube.com/pamelascottmusic"><i class="icon icon-youtube"></i></a></li>
-						</ul>
-					</div><!--social-links-->
-					<div class="widget_nav_menu">
-						<ul class="footer-menu">
-							<li class="menu-item">
-								<a href="index.html">Home</a>
-							</li>
-							<li class="menu-item">
-								<a href="about.html">About</a>
-							</li>
-							<li class="menu-item">
-								<a href="music.html">Music</a>
-							</li>
-							<li class="menu-item">
-								<a href="#tour-concert">Tour & Concerts</a>
-							</li>
-						</ul>
-					</div><!--widget_nav_menu-->
-					<div class="copyright">
-						<p>Copyright &copy; 2026 Pamela Scott Music. All Rights Reserved.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+                        <!-- Social Links -->
+                        <div class="social-links">
+                            <ul>
+                                <li class="mr-3">
+                                    <a href="https://www.facebook.com/iampamelascott">
+                                        <i class="icon icon-facebook"></i>
+                                    </a>
+                                </li>
 
-</div>
+                                <li class="mr-3">
+                                    <a href="https://www.instagram.com/pamelascottmusic">
+                                        <i class="icon icon-instagram"></i>
+                                    </a>
+                                </li>
 
-	<script src="js/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="aos/aos.js"></script>
-	<script type="text/javascript" src="slick/slick/slick.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
+                                <li class="mr-3">
+                                    <a href="https://youtube.com/pamelascottmusic">
+                                        <i class="icon icon-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
 
-	<script>
-	document.addEventListener('DOMContentLoaded', function () {
-		// Close mobile nav overlay on link click (fix from earlier)
-		var navLinks = document.querySelectorAll('.navbar-nav .nav-item a');
-		navLinks.forEach(function (link) {
-			link.addEventListener('click', function () {
-				if (window.jQuery) {
-					jQuery('#slide-navbar-collapse').collapse('hide');
-				}
-				document.querySelector('.navbar-toggler').classList.add('collapsed');
-			});
-		});
-	});
-	</script>
+                        <!-- Footer Navigation -->
+                        <div class="widget_nav_menu">
+                            <ul class="footer-menu">
+                                <li class="menu-item">
+                                    <a href="index.html">Home</a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a href="about.html">About</a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a href="music.html">Music</a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a href="#tour-concert">Tour &amp; Concerts</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Copyright -->
+                        <div class="copyright">
+                            <p>
+                                Copyright &copy; 2026 Pamela Scott Music.
+                                All Rights Reserved.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="aos/aos.js"></script>
+    <script type="text/javascript" src="slick/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Close mobile nav overlay on link click
+            var navLinks = document.querySelectorAll('.navbar-nav .nav-item a');
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    if (window.jQuery) {
+                        jQuery('#slide-navbar-collapse').collapse('hide');
+                    }
+                    document.querySelector('.navbar-toggler').classList.add('collapsed');
+                });
+            });
+        });
+    </script>
 
 </body>
+
 </html>
