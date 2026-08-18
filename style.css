@@ -1979,7 +1979,9 @@ tfoot {
 }
 
 @media (max-width: 767px) {
-
+body {
+  padding-top: 60px; /* match this to your navbar's actual rendered height */
+}
     .latest-videos {
         padding: 50px 15px;
     }
@@ -2011,7 +2013,9 @@ tfoot {
 }
 
 @media (max-width: 480px) {
-
+body {
+  padding-top: 60px; /* match this to your navbar's actual rendered height */
+}
     .latest-videos {
         padding: 40px 10px;
     }
@@ -2042,7 +2046,7 @@ tfoot {
 
 /* Push page content down so it isn't hidden under the fixed navbar */
 body {
-  padding-top: 60px; /* match this to your navbar's actual rendered height */
+  padding-top: 100px; /* match this to your navbar's actual rendered height */
 }
 
 #billboard {
